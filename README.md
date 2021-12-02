@@ -1,24 +1,10 @@
-# fengling-ui
+初始化vue项目 vue created demo
 
-## Project setup
-```
-npm install
-```
+安装组件库 npm add fengling-ui
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+全局导入 
 
-### Compiles and minifies for production
-```
-npm run build
-```
+import OneUI form 'fengling-ui' 
+import 'fengling-ui/lib/fengling.css'
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Vue.use(FengLingUI)
