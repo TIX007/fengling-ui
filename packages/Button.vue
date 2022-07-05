@@ -57,13 +57,6 @@ export default {
 
 <style lang="scss" >
 
-
-
-
-
-
-
-
 .fl-button {
     display: inline-block;
     line-height: 1;
