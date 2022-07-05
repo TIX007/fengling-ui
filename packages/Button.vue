@@ -56,6 +56,14 @@ export default {
 </script>
 
 <style lang="scss" >
+
+
+
+
+
+
+
+
 .fl-button {
     display: inline-block;
     line-height: 1;
@@ -106,6 +114,55 @@ export default {
         background: #85ce61;
         background-color: #85ce61;
         color: #fff;
+    }
+}
+.fl-button-flow {
+    position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+    // border-radius: 60px;
+    z-index: 1;
+
+    &:hover {
+        animation: animate 8s linear infinite;
+    }
+
+    @keyframes animate {
+        0% {
+            background-position: 0%;
+        }
+
+        100% {
+            background-position: 400%;
+        }
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        z-index: -1;
+        background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+        background-size: 400%;
+        border-radius: 40px;
+        opacity: 0;
+        transition: 0.5s;
+    }
+        &:hover::before {
+        filter: blur(20px);
+        opacity: 1;
+        animation: animate 8s linear infinite;
     }
 }
 .fl-button-info {
