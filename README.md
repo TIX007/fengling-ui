@@ -4,7 +4,9 @@
 
 全局导入 
 
+```
 import FengLingUI form 'fengling-ui' 
 import 'fengling-ui/lib/fengling.css'
 
 Vue.use(FengLingUI)
+```
