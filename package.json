@@ -11,7 +11,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "lib": "vue-cli-service build --target lib packages/index.js",
-    "docs:dev": "vuepress dev docs",
+    "docs:dev": "vuepress dev docs --temp .temp",
     "docs:build": "vuepress build docs"
   },
   "dependencies": {

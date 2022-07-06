@@ -1,10 +1,16 @@
 
 module.exports = {
-    title: '多聊天长知识',
-    description: 'collected by gmchen',
     // base: '/',
     // port: 4001,
     plugins: ['demo-container-v2'],
+    // 语言设置
+    locales: {
+    '/': {
+      lang: 'zh-CN',
+      title: 'FengLingUI',
+      description: '基于vue2的UI组件库'
+    }
+  },
     themeConfig : {
       search: true,
       sidebar : {
@@ -20,7 +26,7 @@ module.exports = {
             title: '组件',
             collapsable: true,
             children: [
-                { title: "大前端", path: '/components/button/' }
+                { title: "Button 按钮", path: '/components/button/' }
             ],
         }
     ],
