@@ -8,6 +8,76 @@ export const siteData = {
   "headTags": [],
   "pages": [
     {
+      "title": "Button 按钮",
+      "frontmatter": {},
+      "regularPath": "/components/button/",
+      "relativePath": "components/button/index.md",
+      "key": "v-66abb864",
+      "path": "/components/button/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "基础用法",
+          "slug": "基础用法"
+        },
+        {
+          "level": 2,
+          "title": "禁用状态",
+          "slug": "禁用状态"
+        },
+        {
+          "level": 2,
+          "title": "文字按钮",
+          "slug": "文字按钮"
+        },
+        {
+          "level": 2,
+          "title": "图标按钮",
+          "slug": "图标按钮"
+        },
+        {
+          "level": 2,
+          "title": "按钮组",
+          "slug": "按钮组"
+        },
+        {
+          "level": 2,
+          "title": "加载中",
+          "slug": "加载中"
+        },
+        {
+          "level": 2,
+          "title": "不同尺寸",
+          "slug": "不同尺寸"
+        },
+        {
+          "level": 2,
+          "title": "Attributes",
+          "slug": "attributes"
+        }
+      ]
+    },
+    {
+      "title": "安装",
+      "frontmatter": {},
+      "regularPath": "/components/",
+      "relativePath": "components/index.md",
+      "key": "v-0661f6d5",
+      "path": "/components/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "npm 安装",
+          "slug": "npm-安装"
+        },
+        {
+          "level": 2,
+          "title": "引入 LiuYing",
+          "slug": "引入-liuying"
+        }
+      ]
+    },
+    {
       "title": "Home",
       "frontmatter": {
         "home": true,
@@ -35,41 +105,6 @@ export const siteData = {
       "relativePath": "index.md",
       "key": "v-6abbedae",
       "path": "/"
-    },
-    {
-      "title": "Button 按钮",
-      "frontmatter": {},
-      "regularPath": "/components/button/",
-      "relativePath": "components/button/index.md",
-      "key": "v-66abb864",
-      "path": "/components/button/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "Attributes",
-          "slug": "attributes"
-        }
-      ]
-    },
-    {
-      "title": "安装",
-      "frontmatter": {},
-      "regularPath": "/components/",
-      "relativePath": "components/index.md",
-      "key": "v-0661f6d5",
-      "path": "/components/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "npm 安装",
-          "slug": "npm-安装"
-        },
-        {
-          "level": 2,
-          "title": "引入 LiuYing",
-          "slug": "引入-liuying"
-        }
-      ]
     },
     {
       "frontmatter": {},

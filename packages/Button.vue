@@ -1,7 +1,7 @@
 <template>
     <button class="fl-button"
-        :class="[`fl-button--${type}`, { 'is-plain': plain, 'is-round': round, 'is-circle': circle, 'is-disabled': buttonDisabled, 'is-loading': loading }]"
-        :disabled="buttonDisabled || loading" @click="handleClick">
+        :class="[ type ? 'fl-button--' + type : '', buttonSize ? 'fl-button--' + buttonSize : '', { 'is-plain': plain, 'is-round': round, 'is-circle': circle, 'is-disabled': buttonDisabled, 'is-loading': loading }]"
+        :disabled="buttonDisabled || loading" :autofocus="autofocus" :type="nativeType" @click="handleClick">
         <i class="fl-icon-loading" v-if="loading"></i>
         <i :class="icon" v-if="icon && !loading"></i>
         <!-- 如果没传入任何的内容  -->
@@ -14,48 +14,48 @@
 <script>
 export default {
     name: 'FlButton',
+    inject: {
+        elForm: {
+            default: ''
+        },
+        elFormItem: {
+            default: ''
+        }
+    },
     // 封装通用组件会对props进行校验
     props: {
         type: {
-            // 数据类型：字符串
             type: String,
             default: 'default'
         },
-        plain: {
-            type: Boolean,
-            default: false
-        },
-        round: {
-            type: Boolean,
-            default: false
-        },
-        circle: {
-            type: Boolean,
-            default: false
-        },
+        size: String,
         icon: {
             type: String,
             default: ''
         },
-        // disabled: {
-        //     type: Boolean,
-        //     default: false
-        // }
+        nativeType: {
+            type: String,
+            default: 'button'
+        },
         loading: Boolean,
         disabled: Boolean,
+        plain: Boolean,
+        autofocus: Boolean,
+        round: Boolean,
+        circle: Boolean
     },
     methods: {
-        handleClick(e){
-            this.$emit('click',e)
+        handleClick(e) {
+            this.$emit('click', e)
         }
     },
     computed: {
-        // _flFormItemSize() {
-        //     return (this.flFormItem || {}).flFormItemSize;
-        // },
-        // buttonSize() {
-        //     return this.size || this._flFormItemSize || (this.$flEMENT || {}).size;
-        // },
+        _flFormItemSize() {
+            return (this.flFormItem || {}).flFormItemSize;
+        },
+        buttonSize() {
+            return this.size || this._flFormItemSize || (this.$flEMENT || {}).size;
+        },
         buttonDisabled() {
             return this.$options.propsData.hasOwnProperty('disabled') ? this.disabled : (this.flForm || {}).disabled;
         }
@@ -247,6 +247,54 @@ export default {
     color: #8cc5ff;
     background-color: #ecf5ff;
     border-color: #d9ecff
+}
+
+.fl-button--flow {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+    z-index: 1;
+}
+
+.fl-button--flow:hover {
+    animation: animate 8s linear infinite;
+}
+
+.fl-button--flow:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+    border-radius: 40px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.fl-button--flow:hover::before {
+    filter: blur(20px);
+    opacity: 1;
+    animation: animate 8s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
 }
 
 .fl-button--success {
