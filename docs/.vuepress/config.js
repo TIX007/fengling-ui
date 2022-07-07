@@ -30,30 +30,27 @@ module.exports = {
             ],
         }
     ],
-    '/teacher/' :  [
-        {
-            title: '更新',
-            path: '/teacher/ke1/',
-            collapsable: true,
-            children: [
-                { title: "大前端", link: "/components/button/" }
-            ],
-        }
-    ],
+    // '/teacher/' :  [
+    //     {
+    //         title: '更新',
+    //         path: '/teacher/ke1/',
+    //         collapsable: true,
+    //         children: [
+    //             { title: "大前端", link: "/components/button/" }
+    //         ],
+    //     }
+    // ],
     '/':[
         {
             title: '组件',
             path: '/components/',
-        },
-        {
-            title: '教师证',
-            path: '/teacher/',
-        },
+        }
     ],
 },
       nav: [
+        { text: "首页", link: "/" },
         { text: "组件", link: "/components/" },
-        { text: "更新中", link: "/teacher/" },
+        // { text: "更新中", link: "/teacher/" },
         {
             text: "外链",
             items: [
