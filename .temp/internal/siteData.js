@@ -8,62 +8,6 @@ export const siteData = {
   "headTags": [],
   "pages": [
     {
-      "title": "安装",
-      "frontmatter": {},
-      "regularPath": "/components/",
-      "relativePath": "components/index.md",
-      "key": "v-0661f6d5",
-      "path": "/components/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "npm 安装",
-          "slug": "npm-安装"
-        },
-        {
-          "level": 2,
-          "title": "引入 FengLing",
-          "slug": "引入-fengling"
-        }
-      ]
-    },
-    {
-      "frontmatter": {},
-      "regularPath": "/components/form/",
-      "relativePath": "components/form/index.md",
-      "key": "v-77eae9ce",
-      "path": "/components/form/"
-    },
-    {
-      "title": "Home",
-      "frontmatter": {
-        "home": true,
-        "heroText": "FengLingUI",
-        "tagline": "基于Vue2的UI组件库",
-        "actionText": "快速上手 →",
-        "actionLink": "/components/",
-        "features": [
-          {
-            "title": "简洁易上手",
-            "details": "基于element-ui二次开发，简洁易上手。"
-          },
-          {
-            "title": "Vue框架",
-            "details": "基于Vue2的组件库供大家参考学习及使用。"
-          },
-          {
-            "title": "高复用",
-            "details": "提供多种常用的组件并不断更新。"
-          }
-        ],
-        "footer": "MIT Licensed | Copyright © 2018-present Evan You"
-      },
-      "regularPath": "/",
-      "relativePath": "index.md",
-      "key": "v-6abbedae",
-      "path": "/"
-    },
-    {
       "title": "Button 按钮",
       "frontmatter": {},
       "regularPath": "/components/button/",
@@ -111,10 +55,77 @@ export const siteData = {
           "title": "Attributes",
           "slug": "attributes"
         }
-      ]
+      ],
+      "lastUpdated": "2022/7/7 10:41:25",
+      "lastUpdatedTimestamp": 1657161685000
+    },
+    {
+      "title": "安装",
+      "frontmatter": {},
+      "regularPath": "/components/",
+      "relativePath": "components/index.md",
+      "key": "v-0661f6d5",
+      "path": "/components/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "npm 安装",
+          "slug": "npm-安装"
+        },
+        {
+          "level": 2,
+          "title": "引入 FengLing",
+          "slug": "引入-fengling"
+        }
+      ],
+      "lastUpdated": "2022/7/7 10:41:25",
+      "lastUpdatedTimestamp": 1657161685000
+    },
+    {
+      "title": "Home",
+      "frontmatter": {
+        "home": true,
+        "heroText": "FengLingUI",
+        "tagline": "基于Vue2的UI组件库",
+        "actionText": "快速上手 →",
+        "actionLink": "/components/",
+        "features": [
+          {
+            "title": "简洁易上手",
+            "details": "基于element-ui二次开发，简洁易上手。"
+          },
+          {
+            "title": "Vue框架",
+            "details": "基于Vue2的组件库供大家参考学习及使用。"
+          },
+          {
+            "title": "高复用",
+            "details": "提供多种常用的组件并不断更新。"
+          }
+        ],
+        "footer": "FengLingUI 0.1.1"
+      },
+      "regularPath": "/",
+      "relativePath": "index.md",
+      "key": "v-6abbedae",
+      "path": "/",
+      "lastUpdated": "2022/7/7 11:20:23",
+      "lastUpdatedTimestamp": 1657164023000
+    },
+    {
+      "frontmatter": {},
+      "regularPath": "/components/form/",
+      "relativePath": "components/form/index.md",
+      "key": "v-77eae9ce",
+      "path": "/components/form/",
+      "lastUpdated": "2022/7/6 12:24:28",
+      "lastUpdatedTimestamp": 1657081468000
     }
   ],
   "themeConfig": {
+    "lastUpdated": "最后一次更新",
+    "repo": "TIX007/fengling-ui",
+    "repoLabel": "查看源码",
     "search": true,
     "sidebar": {
       "/components/": [
@@ -156,8 +167,8 @@ export const siteData = {
         "text": "外链",
         "items": [
           {
-            "text": "项目地址",
-            "link": "https://github.com/TIX007/fengling-ui"
+            "text": "文档地址",
+            "link": "https://github.com/TIX007/Vue2-FengLing-UI"
           },
           {
             "text": "Vue3组件库",
