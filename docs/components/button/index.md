@@ -3,7 +3,7 @@
 ## 基础用法
 基础的按钮用法
 
-:::demo 使用`type`属性来定义 Button 的样式。
+:::demo 使用`type`、`plain`、`round`和`circle`属性来定义 Button 的样式。
   ```vue
 
 <fl-row>
@@ -23,6 +23,7 @@
     <fl-button type="info" plain>信息按钮</fl-button>
     <fl-button type="warning" plain>警告按钮</fl-button>
     <fl-button type="danger" plain>危险按钮</fl-button>
+    <fl-button type="flow" plain>流光按钮</fl-button>
 </fl-row>
 
 <fl-row>
@@ -40,7 +41,8 @@
     <fl-button type="success" icon="fl-icon-check" circle></fl-button>
     <fl-button type="info" icon="fl-icon-message" circle></fl-button>
     <fl-button type="warning" icon="fl-icon-star-off" circle></fl-button>
-    <fl-button type="danger" icon="fl-icon-dflete" circle></fl-button>
+    <fl-button type="danger" icon="fl-icon-delete" circle></fl-button>
+    <fl-button type="flow" icon="fl-icon-delete" circle></fl-button>
 </fl-row>
   ```
 :::
@@ -93,7 +95,7 @@
   <template>
     <fl-button type="primary" icon="fl-icon-edit"></fl-button>
     <fl-button type="primary" icon="fl-icon-share"></fl-button>
-    <fl-button type="primary" icon="fl-icon-dflete"></fl-button>
+    <fl-button type="primary" icon="fl-icon-delete"></fl-button>
     <fl-button type="primary" icon="fl-icon-search">搜索</fl-button>
     <fl-button type="primary">上传<i class="fl-icon-upload fl-icon--right"></i></fl-button>
   </template>
@@ -114,7 +116,7 @@
     <fl-button-group>
         <fl-button type="primary" icon="fl-icon-edit"></fl-button>
         <fl-button type="primary" icon="fl-icon-share"></fl-button>
-        <fl-button type="primary" icon="fl-icon-dflete"></fl-button>
+        <fl-button type="primary" icon="fl-icon-delete"></fl-button>
     </fl-button-group>
   </template>
   ```

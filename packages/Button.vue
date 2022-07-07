@@ -1,6 +1,6 @@
 <template>
     <button class="fl-button"
-        :class="[ type ? 'fl-button--' + type : '', buttonSize ? 'fl-button--' + buttonSize : '', { 'is-plain': plain, 'is-round': round, 'is-circle': circle, 'is-disabled': buttonDisabled, 'is-loading': loading }]"
+        :class="[type ? 'fl-button--' + type : '', buttonSize ? 'fl-button--' + buttonSize : '', { 'is-plain': plain, 'is-round': round, 'is-circle': circle, 'is-disabled': buttonDisabled, 'is-loading': loading }]"
         :disabled="buttonDisabled || loading" :autofocus="autofocus" :type="nativeType" @click="handleClick">
         <i class="fl-icon-loading" v-if="loading"></i>
         <i :class="icon" v-if="icon && !loading"></i>
@@ -67,7 +67,6 @@ export default {
 </script>
 
 <style >
-
 .fl-button {
     display: inline-block;
     line-height: 1;
@@ -159,7 +158,7 @@ export default {
 }
 
 .fl-button.is-loading {
-    position: rflative;
+    position: relative;
     pointer-events: none
 }
 
@@ -285,6 +284,12 @@ export default {
     filter: blur(20px);
     opacity: 1;
     animation: animate 8s linear infinite;
+}
+
+.fl-button--flow.is-plain {
+    color: #03a9f4;
+    background: linear-gradient(90deg, #b3d8ff, #fbc4c4, #f5dab1, #b3d8ff);
+    background-size: 400%;
 }
 
 @keyframes animate {

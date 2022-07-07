@@ -4,9 +4,38 @@
 export const siteData = {
   "title": "",
   "description": "",
-  "base": "/",
+  "base": "/Vue2-FengLing-UI/",
   "headTags": [],
   "pages": [
+    {
+      "title": "Home",
+      "frontmatter": {
+        "home": true,
+        "heroText": "Hero 标题",
+        "tagline": "Hero 副标题",
+        "actionText": "快速上手 →",
+        "actionLink": "/components/",
+        "features": [
+          {
+            "title": "简洁至上",
+            "details": "以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。"
+          },
+          {
+            "title": "Vue驱动",
+            "details": "享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。"
+          },
+          {
+            "title": "高性能",
+            "details": "VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。"
+          }
+        ],
+        "footer": "MIT Licensed | Copyright © 2018-present Evan You"
+      },
+      "regularPath": "/",
+      "relativePath": "index.md",
+      "key": "v-6abbedae",
+      "path": "/"
+    },
     {
       "title": "Button 按钮",
       "frontmatter": {},
@@ -58,6 +87,13 @@ export const siteData = {
       ]
     },
     {
+      "frontmatter": {},
+      "regularPath": "/components/form/",
+      "relativePath": "components/form/index.md",
+      "key": "v-77eae9ce",
+      "path": "/components/form/"
+    },
+    {
       "title": "安装",
       "frontmatter": {},
       "regularPath": "/components/",
@@ -72,46 +108,10 @@ export const siteData = {
         },
         {
           "level": 2,
-          "title": "引入 LiuYing",
-          "slug": "引入-liuying"
+          "title": "引入 FengLing",
+          "slug": "引入-fengling"
         }
       ]
-    },
-    {
-      "title": "Home",
-      "frontmatter": {
-        "home": true,
-        "heroText": "Hero 标题",
-        "tagline": "Hero 副标题",
-        "actionText": "快速上手 →",
-        "actionLink": "/components/",
-        "features": [
-          {
-            "title": "简洁至上",
-            "details": "以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。"
-          },
-          {
-            "title": "Vue驱动",
-            "details": "享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。"
-          },
-          {
-            "title": "高性能",
-            "details": "VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。"
-          }
-        ],
-        "footer": "MIT Licensed | Copyright © 2018-present Evan You"
-      },
-      "regularPath": "/",
-      "relativePath": "index.md",
-      "key": "v-6abbedae",
-      "path": "/"
-    },
-    {
-      "frontmatter": {},
-      "regularPath": "/components/form/",
-      "relativePath": "components/form/index.md",
-      "key": "v-77eae9ce",
-      "path": "/components/form/"
     }
   ],
   "themeConfig": {
@@ -138,24 +138,20 @@ export const siteData = {
       ],
       "/teacher/": [
         {
-          "title": "综合素质",
+          "title": "更新",
           "path": "/teacher/ke1/",
           "collapsable": true,
           "children": [
             {
               "title": "大前端",
               "link": "/components/button/"
-            },
-            {
-              "title": "大前端",
-              "link": "/components/from/"
             }
           ]
         }
       ],
       "/": [
         {
-          "title": "组件啊",
+          "title": "组件",
           "path": "/components/"
         },
         {
@@ -166,23 +162,23 @@ export const siteData = {
     },
     "nav": [
       {
-        "text": "大前端",
+        "text": "组件",
         "link": "/components/"
       },
       {
-        "text": "教师证",
+        "text": "更新中",
         "link": "/teacher/"
       },
       {
         "text": "外链",
         "items": [
           {
-            "text": "网道",
-            "link": "https://wangdoc.com/"
+            "text": "项目地址",
+            "link": "https://github.com/TIX007/fengling-ui"
           },
           {
-            "text": "VUE",
-            "link": "https://cn.vuejs.org/v2/guide/"
+            "text": "Vue3组件库",
+            "link": "https://tix007.github.io/vue3-liuying-ui/"
           }
         ]
       }
@@ -193,7 +189,7 @@ export const siteData = {
     "/": {
       "lang": "zh-CN",
       "title": "FengLingUI",
-      "description": "基于vue2的UI组件库",
+      "description": "基于Vue2的UI组件库",
       "path": "/"
     }
   }

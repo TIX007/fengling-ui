@@ -1,6 +1,6 @@
 
 module.exports = {
-    // base: '/',
+    base: '/Vue2-FengLing-UI/',
     // port: 4001,
     plugins: ['demo-container-v2'],
     // 语言设置
@@ -8,7 +8,7 @@ module.exports = {
     '/': {
       lang: 'zh-CN',
       title: 'FengLingUI',
-      description: '基于vue2的UI组件库'
+      description: '基于Vue2的UI组件库'
     }
   },
     themeConfig : {
@@ -32,18 +32,17 @@ module.exports = {
     ],
     '/teacher/' :  [
         {
-            title: '综合素质',
+            title: '更新',
             path: '/teacher/ke1/',
             collapsable: true,
             children: [
-                { title: "大前端", link: "/components/button/" },
-                { title: "大前端", link: "/components/from/" }
+                { title: "大前端", link: "/components/button/" }
             ],
         }
     ],
     '/':[
         {
-            title: '组件啊',
+            title: '组件',
             path: '/components/',
         },
         {
@@ -53,13 +52,13 @@ module.exports = {
     ],
 },
       nav: [
-        { text: "大前端", link: "/components/" },
-        { text: "教师证", link: "/teacher/" },
+        { text: "组件", link: "/components/" },
+        { text: "更新中", link: "/teacher/" },
         {
             text: "外链",
             items: [
-                { text: "网道", link: "https://wangdoc.com/" },
-                { text: "VUE", link: "https://cn.vuejs.org/v2/guide/" }
+                { text: "项目地址", link: "https://github.com/TIX007/fengling-ui" },
+                { text: "Vue3组件库", link: "https://tix007.github.io/vue3-liuying-ui/" }
             ]
         }
       ],
