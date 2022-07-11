@@ -1,5 +1,7 @@
 <template>
     <button class="fl-button"
+        :style="{ 'background': activeColor, 'border': activeBorderColor, 'color': activeTextColor }"
+        @mouseenter="down" @mouseleave="leave"
         :class="[type ? 'fl-button--' + type : '', buttonSize ? 'fl-button--' + buttonSize : '', { 'is-plain': plain, 'is-round': round, 'is-circle': circle, 'is-disabled': buttonDisabled, 'is-loading': loading }]"
         :disabled="buttonDisabled || loading" :autofocus="autofocus" :type="nativeType" @click="handleClick">
         <i class="fl-icon-loading" v-if="loading"></i>
@@ -37,6 +39,26 @@ export default {
             type: String,
             default: 'button'
         },
+        color: {
+            type: String,
+            default: ''
+        },
+        textColor: {
+            type: String,
+            default: ''
+        },
+        border: {
+            type: String,
+            default: ''
+        },
+        enterTextColor: {
+            type: String,
+            default: ''
+        },
+        enterColor: {
+            type: String,
+            default: ''
+        },
         loading: Boolean,
         disabled: Boolean,
         plain: Boolean,
@@ -44,7 +66,31 @@ export default {
         round: Boolean,
         circle: Boolean
     },
+    data () {
+        return {
+            activeColor: this.color,
+            activeBorderColor: this.border ? this.border : this.color,
+            activeTextColor: this.textColor
+        }   
+    },
     methods: {
+        down() {
+            if (this.enterColor) {
+                this.activeColor = this.enterColor
+                if (this.enterTextColor){
+                    this.activeTextColor = this.enterTextColor
+                } else{
+                    this.activeTextColor = this.color
+                }
+                
+            }
+        },
+        leave() {
+            if (this.color) {
+                this.activeColor = this.color
+                this.activeTextColor = this.textColor
+            }
+        },
         handleClick(e) {
             this.$emit('click', e)
         }
@@ -84,8 +130,8 @@ export default {
     -webkit-transition: .1s;
     transition: .1s;
     font-weight: 500;
-    -moz-user-sflect: none;
-    -webkit-user-sflect: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
     -ms-user-sflect: none;
     padding: 12px 20px;
     font-size: 14px;

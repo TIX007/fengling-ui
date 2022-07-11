@@ -47,6 +47,20 @@
   ```
 :::
 
+## 自定义颜色属性
+改变Button颜色
+
+:::demo 你可以使用`color`属性来改变按钮颜色，除此之外还可以用`enterColor`改变鼠标滑入时颜色，`border`改变边框样式不传默认为按钮背景颜色，`enterTextColor`改变鼠标滑入时字体颜色，当然如果没有`enterTextColor`它会默认`color`属性为滑入颜色。
+  ```vue
+<fl-row>
+  <fl-button color="red" enterColor="#409EFF" >按钮</fl-button>
+  <fl-button color="rgb(76, 208, 231)" enterColor="#409EFF" border="#24F165" enterTextColor="#fff" >按钮</fl-button>
+  <fl-button color="rgb(76, 208, 231)" enterColor="#409EFF" border="2px solid #24F165" enterTextColor="#fff" >按钮</fl-button>
+  <fl-button color="rgba(76, 208, 231, 0.2)" enterColor="#409EFF" enterTextColor="#fff" >按钮</fl-button>
+</fl-row>
+  ```
+:::
+
 ## 禁用状态
 按钮不可用状态
 
@@ -152,14 +166,51 @@ Button 组件提供除了默认值以外的三种尺寸，可以在不同场景�
   <fl-button size="small" round>小型按钮</fl-button>
   <fl-button size="mini" round>超小按钮</fl-button>
 </fl-row>
+<fl-row>
+  <fl-button style="font-size: 14px; padding:10px 60px;" >按钮</fl-button>
+</fl-row>
   ```
 :::
 
-## Attributes
+## Props
 
-|参数|说明|类型|可选值|默认值|
+<!-- @vuese:FlButton:props:start -->
+|名字|描述|类型|可选值|默认值|
 |---|---|---|---|---|
-|size|尺寸|`String`|`medium` / `small` / `mini`|-|
-|type|类型|`String`|`primary` / `secondary` / `text`|-|
-|disabled|是否禁用状态|`boolean`|-|`false`|
-|block|是否独占一行|`boolean`|-|`false`|
+|type|类型|`String`|`primary/success/info/warning/danger/flow`|default|
+|size|尺寸|`String`|`medium / small / mini`|
+|icon|图标类名|`String`|-|-|
+|nativeType|原生 type 属性|`String`|`button / submit / reset`|button|
+|color|颜色|`String`|-|-|
+|textColor|字体颜色|`String`|-|-|
+|border|边框|`String`|-|-|
+|enterTextColor|鼠标移入字体颜色|`String`|-|-|
+|enterColor|鼠标移入按钮颜色|`String`|-|-|
+|loading|是否加载中状态|`Boolean`|-|false|
+|disabled|是否禁用状态|`Boolean`|-|false|
+|plain|是否朴素按钮|`Boolean`|-|false|
+|autofocus|是否默认聚焦|`Boolean`|-|false|
+|round|是否圆角按钮|`Boolean`|-|false|
+|circle|是否圆形按钮|`Boolean`|-|false|
+
+<!-- @vuese:FlButton:props:end -->
+
+
+## 事件
+
+<!-- @vuese:FlButton:events:start -->
+|事件名称|描述|参数|
+|---|---|---|
+|click|-|-|
+
+<!-- @vuese:FlButton:events:end -->
+
+
+## Slots
+
+<!-- @vuese:FlButton:slots:start -->
+|Name|Description|Default Slot Content|
+|---|---|---|
+|default|-|-|
+
+<!-- @vuese:FlButton:slots:end -->

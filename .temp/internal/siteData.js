@@ -8,6 +8,28 @@ export const siteData = {
   "headTags": [],
   "pages": [
     {
+      "title": "安装",
+      "frontmatter": {},
+      "regularPath": "/components/",
+      "relativePath": "components/index.md",
+      "key": "v-0661f6d5",
+      "path": "/components/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "npm 安装",
+          "slug": "npm-安装"
+        },
+        {
+          "level": 2,
+          "title": "引入 FengLing",
+          "slug": "引入-fengling"
+        }
+      ],
+      "lastUpdated": "2022/7/7 10:41:25",
+      "lastUpdatedTimestamp": 1657161685000
+    },
+    {
       "title": "Button 按钮",
       "frontmatter": {},
       "regularPath": "/components/button/",
@@ -19,6 +41,11 @@ export const siteData = {
           "level": 2,
           "title": "基础用法",
           "slug": "基础用法"
+        },
+        {
+          "level": 2,
+          "title": "自定义颜色属性",
+          "slug": "自定义颜色属性"
         },
         {
           "level": 2,
@@ -52,34 +79,31 @@ export const siteData = {
         },
         {
           "level": 2,
-          "title": "Attributes",
-          "slug": "attributes"
+          "title": "Props",
+          "slug": "props"
+        },
+        {
+          "level": 2,
+          "title": "事件",
+          "slug": "事件"
+        },
+        {
+          "level": 2,
+          "title": "Slots",
+          "slug": "slots"
         }
       ],
       "lastUpdated": "2022/7/7 10:41:25",
       "lastUpdatedTimestamp": 1657161685000
     },
     {
-      "title": "安装",
       "frontmatter": {},
-      "regularPath": "/components/",
-      "relativePath": "components/index.md",
-      "key": "v-0661f6d5",
-      "path": "/components/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "npm 安装",
-          "slug": "npm-安装"
-        },
-        {
-          "level": 2,
-          "title": "引入 FengLing",
-          "slug": "引入-fengling"
-        }
-      ],
-      "lastUpdated": "2022/7/7 10:41:25",
-      "lastUpdatedTimestamp": 1657161685000
+      "regularPath": "/components/form/",
+      "relativePath": "components/form/index.md",
+      "key": "v-77eae9ce",
+      "path": "/components/form/",
+      "lastUpdated": "2022/7/6 12:24:28",
+      "lastUpdatedTimestamp": 1657081468000
     },
     {
       "title": "Home",
@@ -109,17 +133,8 @@ export const siteData = {
       "relativePath": "index.md",
       "key": "v-6abbedae",
       "path": "/",
-      "lastUpdated": "2022/7/7 11:20:23",
-      "lastUpdatedTimestamp": 1657164023000
-    },
-    {
-      "frontmatter": {},
-      "regularPath": "/components/form/",
-      "relativePath": "components/form/index.md",
-      "key": "v-77eae9ce",
-      "path": "/components/form/",
-      "lastUpdated": "2022/7/6 12:24:28",
-      "lastUpdatedTimestamp": 1657081468000
+      "lastUpdated": "2022/7/7 14:19:46",
+      "lastUpdatedTimestamp": 1657174786000
     }
   ],
   "themeConfig": {
