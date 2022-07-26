@@ -21,6 +21,18 @@ export const routes = [
     redirect: "/components/button/"
   },
   {
+    name: "v-77eae9ce",
+    path: "/components/form/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-77eae9ce").then(next)
+    },
+  },
+  {
+    path: "/components/form/index.html",
+    redirect: "/components/form/"
+  },
+  {
     name: "v-0661f6d5",
     path: "/components/",
     component: GlobalLayout,
@@ -43,18 +55,6 @@ export const routes = [
   {
     path: "/index.html",
     redirect: "/"
-  },
-  {
-    name: "v-77eae9ce",
-    path: "/components/form/",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-77eae9ce").then(next)
-    },
-  },
-  {
-    path: "/components/form/index.html",
-    redirect: "/components/form/"
   },
   {
     path: '*',

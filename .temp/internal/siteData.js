@@ -75,6 +75,15 @@ export const siteData = {
       "lastUpdatedTimestamp": 1657518717000
     },
     {
+      "frontmatter": {},
+      "regularPath": "/components/form/",
+      "relativePath": "components/form/index.md",
+      "key": "v-77eae9ce",
+      "path": "/components/form/",
+      "lastUpdated": "2022/7/6 下午12:24:28",
+      "lastUpdatedTimestamp": 1657081468000
+    },
+    {
       "title": "安装",
       "frontmatter": {},
       "regularPath": "/components/",
@@ -93,8 +102,8 @@ export const siteData = {
           "slug": "引入-fengling"
         }
       ],
-      "lastUpdated": "2022/7/7 上午10:41:25",
-      "lastUpdatedTimestamp": 1657161685000
+      "lastUpdated": "2022/7/26 下午3:50:16",
+      "lastUpdatedTimestamp": 1658821816000
     },
     {
       "title": "Home",
@@ -126,15 +135,6 @@ export const siteData = {
       "path": "/",
       "lastUpdated": "2022/7/7 下午2:19:46",
       "lastUpdatedTimestamp": 1657174786000
-    },
-    {
-      "frontmatter": {},
-      "regularPath": "/components/form/",
-      "relativePath": "components/form/index.md",
-      "key": "v-77eae9ce",
-      "path": "/components/form/",
-      "lastUpdated": "2022/7/6 下午12:24:28",
-      "lastUpdatedTimestamp": 1657081468000
     }
   ],
   "themeConfig": {
