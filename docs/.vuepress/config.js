@@ -14,6 +14,8 @@ module.exports = {
     themeConfig: {
         lastUpdated: '最后一次更新',
         repo: 'TIX007/fengling-ui',
+        editLinks: true,
+        editLinkText: '帮助我们改善此页面！',
         repoLabel: '查看源码',
         search: true,
         sidebar: {
@@ -53,7 +55,6 @@ module.exports = {
         nav: [
             { text: "首页", link: "/" },
             { text: "组件", link: "/components/" },
-            // { text: "更新中", link: "/teacher/" },
             {
                 text: "外链",
                 items: [

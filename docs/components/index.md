@@ -14,8 +14,8 @@ npm i fengling-ui -S
 
 ``` js
 import Vue from 'vue';
-import FengLingUI form 'fengling-ui' 
-import 'fengling-ui/lib/fengling.css'
+import FengLingUI from 'fengling-ui' 
+import 'fengling-ui/dist/fengling-ui.css'
 import App from './App.vue';
 
 Vue.use(FengLingUI);

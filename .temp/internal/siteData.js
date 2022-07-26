@@ -8,28 +8,6 @@ export const siteData = {
   "headTags": [],
   "pages": [
     {
-      "title": "安装",
-      "frontmatter": {},
-      "regularPath": "/components/",
-      "relativePath": "components/index.md",
-      "key": "v-0661f6d5",
-      "path": "/components/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "npm 安装",
-          "slug": "npm-安装"
-        },
-        {
-          "level": 2,
-          "title": "引入 FengLing",
-          "slug": "引入-fengling"
-        }
-      ],
-      "lastUpdated": "2022/7/7 10:41:25",
-      "lastUpdatedTimestamp": 1657161685000
-    },
-    {
       "title": "Button 按钮",
       "frontmatter": {},
       "regularPath": "/components/button/",
@@ -93,17 +71,30 @@ export const siteData = {
           "slug": "slots"
         }
       ],
-      "lastUpdated": "2022/7/7 10:41:25",
-      "lastUpdatedTimestamp": 1657161685000
+      "lastUpdated": "2022/7/11 下午1:51:57",
+      "lastUpdatedTimestamp": 1657518717000
     },
     {
+      "title": "安装",
       "frontmatter": {},
-      "regularPath": "/components/form/",
-      "relativePath": "components/form/index.md",
-      "key": "v-77eae9ce",
-      "path": "/components/form/",
-      "lastUpdated": "2022/7/6 12:24:28",
-      "lastUpdatedTimestamp": 1657081468000
+      "regularPath": "/components/",
+      "relativePath": "components/index.md",
+      "key": "v-0661f6d5",
+      "path": "/components/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "npm 安装",
+          "slug": "npm-安装"
+        },
+        {
+          "level": 2,
+          "title": "引入 FengLing",
+          "slug": "引入-fengling"
+        }
+      ],
+      "lastUpdated": "2022/7/7 上午10:41:25",
+      "lastUpdatedTimestamp": 1657161685000
     },
     {
       "title": "Home",
@@ -133,13 +124,24 @@ export const siteData = {
       "relativePath": "index.md",
       "key": "v-6abbedae",
       "path": "/",
-      "lastUpdated": "2022/7/7 14:19:46",
+      "lastUpdated": "2022/7/7 下午2:19:46",
       "lastUpdatedTimestamp": 1657174786000
+    },
+    {
+      "frontmatter": {},
+      "regularPath": "/components/form/",
+      "relativePath": "components/form/index.md",
+      "key": "v-77eae9ce",
+      "path": "/components/form/",
+      "lastUpdated": "2022/7/6 下午12:24:28",
+      "lastUpdatedTimestamp": 1657081468000
     }
   ],
   "themeConfig": {
     "lastUpdated": "最后一次更新",
     "repo": "TIX007/fengling-ui",
+    "editLinks": true,
+    "editLinkText": "帮助我们改善此页面！",
     "repoLabel": "查看源码",
     "search": true,
     "sidebar": {

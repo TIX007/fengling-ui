@@ -5,8 +5,8 @@
 全局导入 
 
 ```
-import FengLingUI form 'fengling-ui' 
-import 'fengling-ui/lib/fengling.css'
+import FengLingUI from 'fengling-ui' 
+import 'fengling-ui/dist/fengling-ui.css'
 
 Vue.use(FengLingUI)
 ```
