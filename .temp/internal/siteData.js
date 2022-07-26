@@ -8,6 +8,37 @@ export const siteData = {
   "headTags": [],
   "pages": [
     {
+      "title": "安装",
+      "frontmatter": {},
+      "regularPath": "/components/",
+      "relativePath": "components/index.md",
+      "key": "v-0661f6d5",
+      "path": "/components/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "npm 安装",
+          "slug": "npm-安装"
+        },
+        {
+          "level": 2,
+          "title": "引入 FengLing",
+          "slug": "引入-fengling"
+        }
+      ],
+      "lastUpdated": "2022/7/26 下午3:50:16",
+      "lastUpdatedTimestamp": 1658821816000
+    },
+    {
+      "frontmatter": {},
+      "regularPath": "/components/form/",
+      "relativePath": "components/form/index.md",
+      "key": "v-77eae9ce",
+      "path": "/components/form/",
+      "lastUpdated": "2022/7/6 下午12:24:28",
+      "lastUpdatedTimestamp": 1657081468000
+    },
+    {
       "title": "Button 按钮",
       "frontmatter": {},
       "regularPath": "/components/button/",
@@ -75,37 +106,6 @@ export const siteData = {
       "lastUpdatedTimestamp": 1657518717000
     },
     {
-      "frontmatter": {},
-      "regularPath": "/components/form/",
-      "relativePath": "components/form/index.md",
-      "key": "v-77eae9ce",
-      "path": "/components/form/",
-      "lastUpdated": "2022/7/6 下午12:24:28",
-      "lastUpdatedTimestamp": 1657081468000
-    },
-    {
-      "title": "安装",
-      "frontmatter": {},
-      "regularPath": "/components/",
-      "relativePath": "components/index.md",
-      "key": "v-0661f6d5",
-      "path": "/components/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "npm 安装",
-          "slug": "npm-安装"
-        },
-        {
-          "level": 2,
-          "title": "引入 FengLing",
-          "slug": "引入-fengling"
-        }
-      ],
-      "lastUpdated": "2022/7/26 下午3:50:16",
-      "lastUpdatedTimestamp": 1658821816000
-    },
-    {
       "title": "Home",
       "frontmatter": {
         "home": true,
@@ -141,7 +141,8 @@ export const siteData = {
     "lastUpdated": "最后一次更新",
     "repo": "TIX007/fengling-ui",
     "editLinks": true,
-    "editLinkText": "帮助我们改善此页面！",
+    "docsDir": "docs",
+    "editLinkText": "在 GitHub 上编辑此页",
     "repoLabel": "查看源码",
     "search": true,
     "sidebar": {

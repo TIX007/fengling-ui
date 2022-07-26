@@ -15,7 +15,8 @@ module.exports = {
         lastUpdated: '最后一次更新',
         repo: 'TIX007/fengling-ui',
         editLinks: true,
-        editLinkText: '帮助我们改善此页面！',
+        docsDir: 'docs',
+        editLinkText: '在 GitHub 上编辑此页',
         repoLabel: '查看源码',
         search: true,
         sidebar: {
