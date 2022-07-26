@@ -32,7 +32,8 @@ module.exports = {
                     title: '组件',
                     collapsable: true,
                     children: [
-                        { title: "Button 按钮", path: '/components/button/' }
+                        { title: "Button 按钮", path: '/components/button/' },
+                        { title: "Radio 按钮", path: '/components/Radio/' },
                     ],
                 }
             ],

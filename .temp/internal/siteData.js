@@ -8,37 +8,6 @@ export const siteData = {
   "headTags": [],
   "pages": [
     {
-      "title": "安装",
-      "frontmatter": {},
-      "regularPath": "/components/",
-      "relativePath": "components/index.md",
-      "key": "v-0661f6d5",
-      "path": "/components/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "npm 安装",
-          "slug": "npm-安装"
-        },
-        {
-          "level": 2,
-          "title": "引入 FengLing",
-          "slug": "引入-fengling"
-        }
-      ],
-      "lastUpdated": "2022/7/26 下午3:50:16",
-      "lastUpdatedTimestamp": 1658821816000
-    },
-    {
-      "frontmatter": {},
-      "regularPath": "/components/form/",
-      "relativePath": "components/form/index.md",
-      "key": "v-77eae9ce",
-      "path": "/components/form/",
-      "lastUpdated": "2022/7/6 下午12:24:28",
-      "lastUpdatedTimestamp": 1657081468000
-    },
-    {
       "title": "Button 按钮",
       "frontmatter": {},
       "regularPath": "/components/button/",
@@ -106,6 +75,28 @@ export const siteData = {
       "lastUpdatedTimestamp": 1657518717000
     },
     {
+      "title": "安装",
+      "frontmatter": {},
+      "regularPath": "/components/",
+      "relativePath": "components/index.md",
+      "key": "v-0661f6d5",
+      "path": "/components/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "npm 安装",
+          "slug": "npm-安装"
+        },
+        {
+          "level": 2,
+          "title": "引入 FengLing",
+          "slug": "引入-fengling"
+        }
+      ],
+      "lastUpdated": "2022/7/26 下午3:50:16",
+      "lastUpdatedTimestamp": 1658821816000
+    },
+    {
       "title": "Home",
       "frontmatter": {
         "home": true,
@@ -135,6 +126,35 @@ export const siteData = {
       "path": "/",
       "lastUpdated": "2022/7/7 下午2:19:46",
       "lastUpdatedTimestamp": 1657174786000
+    },
+    {
+      "frontmatter": {},
+      "regularPath": "/components/form/",
+      "relativePath": "components/form/index.md",
+      "key": "v-77eae9ce",
+      "path": "/components/form/",
+      "lastUpdated": "2022/7/6 下午12:24:28",
+      "lastUpdatedTimestamp": 1657081468000
+    },
+    {
+      "title": "Radio 单选框",
+      "frontmatter": {},
+      "regularPath": "/components/Radio/",
+      "relativePath": "components/Radio/index.md",
+      "key": "v-ee012d2c",
+      "path": "/components/Radio/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "基础用法",
+          "slug": "基础用法"
+        },
+        {
+          "level": 2,
+          "title": "禁用状态",
+          "slug": "禁用状态"
+        }
+      ]
     }
   ],
   "themeConfig": {
@@ -161,6 +181,10 @@ export const siteData = {
             {
               "title": "Button 按钮",
               "path": "/components/button/"
+            },
+            {
+              "title": "Radio 按钮",
+              "path": "/components/Radio/"
             }
           ]
         }
