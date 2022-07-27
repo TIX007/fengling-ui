@@ -1,7 +1,7 @@
 
 module.exports = {
     base: '/Vue2-FengLing-UI/',
-    // port: 4001,
+    // port: 4001,theme-default-content custom content__default default
     plugins: ['demo-container-v2'],
     // 语言设置
     locales: {
@@ -33,7 +33,7 @@ module.exports = {
                     collapsable: true,
                     children: [
                         { title: "Button 按钮", path: '/components/button/' },
-                        { title: "Radio 按钮", path: '/components/Radio/' },
+                        { title: "Radio 单选框", path: '/components/Radio/' },
                     ],
                 }
             ],

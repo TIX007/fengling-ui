@@ -9,6 +9,18 @@ import GlobalLayout from "D:\\3三阶段\\项目实战\\vue项目\\UI库\\模板
 injectComponentOption(GlobalLayout, 'mixins', rootMixins)
 export const routes = [
   {
+    name: "v-ee012d2c",
+    path: "/components/Radio/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-ee012d2c").then(next)
+    },
+  },
+  {
+    path: "/components/Radio/index.html",
+    redirect: "/components/Radio/"
+  },
+  {
     name: "v-66abb864",
     path: "/components/button/",
     component: GlobalLayout,
@@ -33,18 +45,6 @@ export const routes = [
     redirect: "/components/"
   },
   {
-    name: "v-6abbedae",
-    path: "/",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-6abbedae").then(next)
-    },
-  },
-  {
-    path: "/index.html",
-    redirect: "/"
-  },
-  {
     name: "v-77eae9ce",
     path: "/components/form/",
     component: GlobalLayout,
@@ -57,16 +57,16 @@ export const routes = [
     redirect: "/components/form/"
   },
   {
-    name: "v-ee012d2c",
-    path: "/components/Radio/",
+    name: "v-6abbedae",
+    path: "/",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-ee012d2c").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-6abbedae").then(next)
     },
   },
   {
-    path: "/components/Radio/index.html",
-    redirect: "/components/Radio/"
+    path: "/index.html",
+    redirect: "/"
   },
   {
     path: '*',

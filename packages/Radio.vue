@@ -1,8 +1,8 @@
 <template>
-    <label class="fl-radio" :class="{ 'is-checked': label == model }">
-        <span class="fl-radio_input">
+    <label class="fl-radio" :class="[{ 'is-disabled': isDisabled }, { 'is-checked': label == model }]">
+        <span :class="{ 'is-disabled': isDisabled, }" class="fl-radio_input">
             <span class="fl-radio_inner"></span>
-            <input type="radio" class="fl-radio_original" :value="label" v-model="model" />
+            <input type="radio" class="fl-radio_original" :value="label" v-model="model" :disabled="isDisabled" />
         </span>
         <span class="fl-radio_label">
             <slot></slot>
@@ -24,7 +24,8 @@ export default {
         name: {
             type: String,
             defualt: ''
-        }
+        },
+        disabled: Boolean,
     },
     inject: {
         RadioGroup: {
@@ -40,6 +41,11 @@ export default {
                 // 触发父组件的input事件
                 this.isGroup ? this.RadioGroup.$emit('input', value) : this.$emit('input', value)
             }
+        },
+        isDisabled() {
+            return this.isGroup
+                ? this._radioGroup.disabled || this.disabled || (this.elForm || {}).disabled
+                : this.disabled || (this.elForm || {}).disabled;
         },
         // 用于判断radio是否被radioGroup包裹
         isGroup() {
@@ -65,6 +71,7 @@ export default {
     -moz-user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
+
     .fl-radio_input {
         white-space: nowrap;
         cursor: pointer;
@@ -73,6 +80,7 @@ export default {
         line-height: 1;
         position: relative;
         vertical-align: middle;
+
         .fl-radio_inner {
             border: 1px solid #dcdfe6;
             border-radius: 100%;
@@ -83,6 +91,7 @@ export default {
             cursor: pointer;
             display: inline-block;
             box-sizing: border-box;
+
             &:after {
                 width: 4px;
                 height: 4px;
@@ -96,6 +105,7 @@ export default {
                 transition: transform 0.15s ease-in;
             }
         }
+
         .fl-radio_original {
             opacity: 0;
             outline: none;
@@ -108,22 +118,61 @@ export default {
             margin: 0;
         }
     }
+
     .fl-radio_label {
         font-size: 14px;
         padding-left: 10px;
     }
 }
+
+.is-disabled {
+    color: #C0C4CC;
+    cursor: not-allowed;
+    background-image: none;
+    background-color: #FFF;
+    border-color: #EBEEF5;
+
+    .fl-radio_input {
+        cursor: not-allowed;
+
+        .fl-radio_inner {
+            background-color: #FFF;
+            cursor: not-allowed;
+        }
+
+    }
+}
+
+.fl-radio.is-checked.is-disabled {
+    .fl-radio_input {
+        .fl-radio_inner {
+            border-color: #c0c4cc;
+            background-color: #c0c4cc;
+
+            &:after {
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+    }
+
+    .fl-radio_label {
+        color: #c0c4cc;
+    }
+}
+
 // 选中的样式
 .fl-radio.is-checked {
     .fl-radio_input {
         .fl-radio_inner {
             border-color: #409eff;
             background-color: #409eff;
+
             &:after {
                 transform: translate(-50%, -50%) scale(1);
             }
         }
     }
+
     .fl-radio_label {
         color: #409eff;
     }

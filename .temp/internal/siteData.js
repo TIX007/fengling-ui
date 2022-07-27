@@ -8,6 +8,28 @@ export const siteData = {
   "headTags": [],
   "pages": [
     {
+      "title": "Radio 单选框",
+      "frontmatter": {},
+      "regularPath": "/components/Radio/",
+      "relativePath": "components/Radio/index.md",
+      "key": "v-ee012d2c",
+      "path": "/components/Radio/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "基础用法",
+          "slug": "基础用法"
+        },
+        {
+          "level": 2,
+          "title": "禁用状态",
+          "slug": "禁用状态"
+        }
+      ],
+      "lastUpdated": "2022/7/26 下午4:59:18",
+      "lastUpdatedTimestamp": 1658825958000
+    },
+    {
       "title": "Button 按钮",
       "frontmatter": {},
       "regularPath": "/components/button/",
@@ -97,6 +119,15 @@ export const siteData = {
       "lastUpdatedTimestamp": 1658821816000
     },
     {
+      "frontmatter": {},
+      "regularPath": "/components/form/",
+      "relativePath": "components/form/index.md",
+      "key": "v-77eae9ce",
+      "path": "/components/form/",
+      "lastUpdated": "2022/7/6 下午12:24:28",
+      "lastUpdatedTimestamp": 1657081468000
+    },
+    {
       "title": "Home",
       "frontmatter": {
         "home": true,
@@ -118,7 +149,7 @@ export const siteData = {
             "details": "提供多种常用的组件并不断更新。"
           }
         ],
-        "footer": "FengLingUI 0.1.1"
+        "footer": "FengLingUI 0.1.6"
       },
       "regularPath": "/",
       "relativePath": "index.md",
@@ -126,35 +157,6 @@ export const siteData = {
       "path": "/",
       "lastUpdated": "2022/7/7 下午2:19:46",
       "lastUpdatedTimestamp": 1657174786000
-    },
-    {
-      "frontmatter": {},
-      "regularPath": "/components/form/",
-      "relativePath": "components/form/index.md",
-      "key": "v-77eae9ce",
-      "path": "/components/form/",
-      "lastUpdated": "2022/7/6 下午12:24:28",
-      "lastUpdatedTimestamp": 1657081468000
-    },
-    {
-      "title": "Radio 单选框",
-      "frontmatter": {},
-      "regularPath": "/components/Radio/",
-      "relativePath": "components/Radio/index.md",
-      "key": "v-ee012d2c",
-      "path": "/components/Radio/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "基础用法",
-          "slug": "基础用法"
-        },
-        {
-          "level": 2,
-          "title": "禁用状态",
-          "slug": "禁用状态"
-        }
-      ]
     }
   ],
   "themeConfig": {
@@ -183,7 +185,7 @@ export const siteData = {
               "path": "/components/button/"
             },
             {
-              "title": "Radio 按钮",
+              "title": "Radio 单选框",
               "path": "/components/Radio/"
             }
           ]

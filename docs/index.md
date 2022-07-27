@@ -12,5 +12,9 @@ features:
   details: 基于Vue2的组件库供大家参考学习及使用。
 - title: 高复用
   details: 提供多种常用的组件并不断更新。
-footer: FengLingUI 0.1.1
+footer: FengLingUI 0.1.6
 ---
+
+::: tip
+本组件库参考element-ui，进行学习与优化
+:::
