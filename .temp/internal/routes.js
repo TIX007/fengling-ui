@@ -33,6 +33,18 @@ export const routes = [
     redirect: "/components/button/"
   },
   {
+    name: "v-06cc56e8",
+    path: "/components/loading/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-06cc56e8").then(next)
+    },
+  },
+  {
+    path: "/components/loading/index.html",
+    redirect: "/components/loading/"
+  },
+  {
     name: "v-0661f6d5",
     path: "/components/",
     component: GlobalLayout,

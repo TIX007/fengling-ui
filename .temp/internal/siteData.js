@@ -97,6 +97,14 @@ export const siteData = {
       "lastUpdatedTimestamp": 1657518717000
     },
     {
+      "title": "持续更新中……",
+      "frontmatter": {},
+      "regularPath": "/components/loading/",
+      "relativePath": "components/loading/index.md",
+      "key": "v-06cc56e8",
+      "path": "/components/loading/"
+    },
+    {
       "title": "安装",
       "frontmatter": {},
       "regularPath": "/components/",
@@ -155,8 +163,8 @@ export const siteData = {
       "relativePath": "index.md",
       "key": "v-6abbedae",
       "path": "/",
-      "lastUpdated": "2022/7/7 下午2:19:46",
-      "lastUpdatedTimestamp": 1657174786000
+      "lastUpdated": "2022/7/27 下午2:46:27",
+      "lastUpdatedTimestamp": 1658904387000
     }
   ],
   "themeConfig": {
@@ -187,6 +195,10 @@ export const siteData = {
             {
               "title": "Radio 单选框",
               "path": "/components/Radio/"
+            },
+            {
+              "title": "持续更新中……",
+              "path": "/components/loading/"
             }
           ]
         }

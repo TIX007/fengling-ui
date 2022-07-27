@@ -34,6 +34,7 @@ module.exports = {
                     children: [
                         { title: "Button 按钮", path: '/components/button/' },
                         { title: "Radio 单选框", path: '/components/Radio/' },
+                        { title: "持续更新中……", path: '/components/loading/' },
                     ],
                 }
             ],
