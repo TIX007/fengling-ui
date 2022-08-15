@@ -19,6 +19,7 @@ module.exports = {
         editLinkText: '在 GitHub 上编辑此页',
         repoLabel: '查看源码',
         search: true,
+        searchMaxSuggestions: 10,
         sidebar: {
             '/components/': [
                 {

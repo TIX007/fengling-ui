@@ -24,10 +24,61 @@ export const siteData = {
           "level": 2,
           "title": "禁用状态",
           "slug": "禁用状态"
+        },
+        {
+          "level": 2,
+          "title": "单选框组",
+          "slug": "单选框组"
+        },
+        {
+          "level": 2,
+          "title": "按钮样式",
+          "slug": "按钮样式"
         }
       ],
       "lastUpdated": "2022/7/26 下午4:59:18",
       "lastUpdatedTimestamp": 1658825958000
+    },
+    {
+      "frontmatter": {},
+      "regularPath": "/components/form/",
+      "relativePath": "components/form/index.md",
+      "key": "v-77eae9ce",
+      "path": "/components/form/",
+      "lastUpdated": "2022/7/6 下午12:24:28",
+      "lastUpdatedTimestamp": 1657081468000
+    },
+    {
+      "title": "安装",
+      "frontmatter": {},
+      "regularPath": "/components/",
+      "relativePath": "components/index.md",
+      "key": "v-0661f6d5",
+      "path": "/components/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "npm 安装",
+          "slug": "npm-安装"
+        },
+        {
+          "level": 2,
+          "title": "引入 FengLing",
+          "slug": "引入-fengling"
+        }
+      ],
+      "lastUpdated": "2022/7/26 下午3:50:16",
+      "lastUpdatedTimestamp": 1658821816000
+    },
+    {
+      "title": "持续更新中……",
+      "frontmatter": {},
+      "regularPath": "/components/loading/",
+      "relativePath": "components/loading/index.md",
+      "key": "v-06cc56e8",
+      "path": "/components/loading/",
+      "lastUpdated": "2022/7/27 下午4:09:04",
+      "lastUpdatedTimestamp": 1658909344000
     },
     {
       "title": "Button 按钮",
@@ -97,45 +148,6 @@ export const siteData = {
       "lastUpdatedTimestamp": 1657518717000
     },
     {
-      "title": "持续更新中……",
-      "frontmatter": {},
-      "regularPath": "/components/loading/",
-      "relativePath": "components/loading/index.md",
-      "key": "v-06cc56e8",
-      "path": "/components/loading/"
-    },
-    {
-      "title": "安装",
-      "frontmatter": {},
-      "regularPath": "/components/",
-      "relativePath": "components/index.md",
-      "key": "v-0661f6d5",
-      "path": "/components/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "npm 安装",
-          "slug": "npm-安装"
-        },
-        {
-          "level": 2,
-          "title": "引入 FengLing",
-          "slug": "引入-fengling"
-        }
-      ],
-      "lastUpdated": "2022/7/26 下午3:50:16",
-      "lastUpdatedTimestamp": 1658821816000
-    },
-    {
-      "frontmatter": {},
-      "regularPath": "/components/form/",
-      "relativePath": "components/form/index.md",
-      "key": "v-77eae9ce",
-      "path": "/components/form/",
-      "lastUpdated": "2022/7/6 下午12:24:28",
-      "lastUpdatedTimestamp": 1657081468000
-    },
-    {
       "title": "Home",
       "frontmatter": {
         "home": true,
@@ -175,6 +187,7 @@ export const siteData = {
     "editLinkText": "在 GitHub 上编辑此页",
     "repoLabel": "查看源码",
     "search": true,
+    "searchMaxSuggestions": 10,
     "sidebar": {
       "/components/": [
         {

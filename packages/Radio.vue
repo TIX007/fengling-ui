@@ -32,6 +32,7 @@ export default {
             default: ''
         }
     },
+    componentName: 'FlRadio',
     computed: {
         model: {
             get() {
@@ -43,9 +44,7 @@ export default {
             }
         },
         isDisabled() {
-            return this.isGroup
-                ? this._radioGroup.disabled || this.disabled || (this.elForm || {}).disabled
-                : this.disabled || (this.elForm || {}).disabled;
+            return this.$options.propsData.hasOwnProperty('disabled') ? this.disabled : (this.flForm || {}).disabled;
         },
         // 用于判断radio是否被radioGroup包裹
         isGroup() {

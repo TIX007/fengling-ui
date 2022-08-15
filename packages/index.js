@@ -7,6 +7,7 @@ import Input from './Input'
 import Checkbox from './Checkbox'
 import Radio from './Radio'
 import RadioGroup from './Radio-group'
+import RadioButton from './Radio-button'
 import Switch from './Switch'
 import CheckboxGroup from './Checkbox-group'
 import Form from './Form'
@@ -23,6 +24,7 @@ const components = [
   Checkbox,
   Radio,
   RadioGroup,
+  RadioButton,
   Switch,
   CheckboxGroup,
   Form,
