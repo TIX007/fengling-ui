@@ -1,5 +1,6 @@
 <template>
-    <label class="fl-radio" :class="[{ 'is-disabled': isDisabled }, { 'is-checked': label == model }]">
+    <label class="fl-radio"
+        :class="[border && radioSize ? 'fl-radio--' + radioSize : '', { 'is-disabled': isDisabled }, { 'is-bordered': border }, { 'is-checked': label == model }]">
         <span :class="{ 'is-disabled': isDisabled, }" class="fl-radio_input">
             <span class="fl-radio_inner"></span>
             <input type="radio" class="fl-radio_original" :value="label" v-model="model" :disabled="isDisabled" />
@@ -26,6 +27,8 @@ export default {
             defualt: ''
         },
         disabled: Boolean,
+        border: Boolean,
+        size: String
     },
     inject: {
         RadioGroup: {
@@ -44,18 +47,44 @@ export default {
             }
         },
         isDisabled() {
-            return this.$options.propsData.hasOwnProperty('disabled') ? this.disabled : (this.flForm || {}).disabled;
+            // return this.$options.propsData.hasOwnProperty('disabled') ? this.disabled : (this.flForm || {}).disabled;
+            return this.isGroup
+                ? this.RadioGroup.disabled || this.disabled || (this.flForm || {}).disabled
+                : this.disabled || (this.flForm || {}).disabled;
         },
         // 用于判断radio是否被radioGroup包裹
         isGroup() {
             // 返回布尔值
             return !!this.RadioGroup
-        }
+        },
+        radioSize() {
+            const temRadioSize = this.size || this._flFormItemSize || (this.$FLEMENT || {}).size;
+            return this.isGroup
+                ? this.RadioGroup.radioGroupSize || temRadioSize
+                : temRadioSize;
+        },
     },
 }
 </script>
 
 <style lang="scss" scoped>
+@import "common/var.scss";
+@import "mixins/mixins";
+@import "mixins/utils";
+
+// $--radio-bordered-height: 40px !default;
+// $--radio-bordered-padding: 12px 20px 0 10px !default;
+// $--radio-bordered-medium-padding: 10px 20px 0 10px !default;
+// $--radio-bordered-small-padding: 8px 15px 0 10px !default;
+// $--radio-bordered-mini-padding: 6px 15px 0 10px !default;
+// $--button-medium-border-radius: 4px !default;
+// $--radio-bordered-medium-height: 36px !default;
+// $--radio-bordered-medium-height: 36px !default;
+// $--font-size-base: 14px !default;
+// $--button-medium-font-size: $--font-size-base  !default;
+// $--radio-bordered-medium-input-height: 14px !default;
+// $--radio-bordered-medium-input-width: 14px !default;
+
 .fl-radio {
     color: #606266;
     font-weight: 500;
@@ -174,6 +203,144 @@ export default {
 
     .fl-radio_label {
         color: #409eff;
+    }
+}
+
+@include b(radio) {
+    @include when(bordered) {
+        padding: $--radio-bordered-padding;
+        border-radius: $--border-radius-base;
+        border: $--border-base;
+        box-sizing: border-box;
+        height: $--radio-bordered-height;
+
+        &.is-checked {
+            border-color: $--color-primary;
+        }
+
+        &.is-disabled {
+            cursor: not-allowed;
+            border-color: $--border-color-lighter;
+        }
+
+        &+.fl-radio.is-bordered {
+            margin-left: 10px;
+        }
+    }
+
+    @include m(medium) {
+        &.is-bordered {
+            padding: $--radio-bordered-medium-padding;
+            border-radius: $--button-medium-border-radius;
+            height: $--radio-bordered-medium-height;
+
+            .fl-radio__label {
+                font-size: $--button-medium-font-size;
+            }
+
+            .fl-radio__inner {
+                height: $--radio-bordered-medium-input-height;
+                width: $--radio-bordered-medium-input-width;
+            }
+        }
+    }
+
+    @include m(small) {
+        &.is-bordered {
+            padding: $--radio-bordered-small-padding;
+            border-radius: $--button-small-border-radius;
+            height: $--radio-bordered-small-height;
+
+            .fl-radio__label {
+                font-size: $--button-small-font-size;
+            }
+
+            .fl-radio__inner {
+                height: $--radio-bordered-small-input-height;
+                width: $--radio-bordered-small-input-width;
+            }
+        }
+    }
+
+    @include m(mini) {
+        &.is-bordered {
+            padding: $--radio-bordered-mini-padding;
+            border-radius: $--button-mini-border-radius;
+            height: $--radio-bordered-mini-height;
+
+            .fl-radio__label {
+                font-size: $--button-mini-font-size;
+            }
+
+            .fl-radio__inner {
+                height: $--radio-bordered-mini-input-height;
+                width: $--radio-bordered-mini-input-width;
+            }
+        }
+    }
+
+    @include e(input) {
+        white-space: nowrap;
+        cursor: pointer;
+        outline: none;
+        display: inline-block;
+        line-height: 1;
+        position: relative;
+        vertical-align: middle;
+
+        @include when(disabled) {
+            .fl-radio__inner {
+                background-color: $--radio-disabled-input-fill;
+                border-color: $--radio-disabled-input-border-color;
+                cursor: not-allowed;
+
+                &::after {
+                    cursor: not-allowed;
+                    background-color: $--radio-disabled-icon-color;
+                }
+
+                &+.fl-radio__label {
+                    cursor: not-allowed;
+                }
+            }
+
+            &.is-checked {
+                .fl-radio__inner {
+                    background-color: $--radio-disabled-checked-input-fill;
+                    border-color: $--radio-disabled-checked-input-border-color;
+
+                    &::after {
+                        background-color: $--radio-disabled-checked-icon-color;
+                    }
+                }
+            }
+
+            &+span.fl-radio__label {
+                color: $--color-text-placeholder;
+                cursor: not-allowed;
+            }
+        }
+
+        @include when(checked) {
+            .fl-radio__inner {
+                border-color: $--radio-checked-input-border-color;
+                background: $--radio-checked-icon-color;
+
+                &::after {
+                    transform: translate(-50%, -50%) scale(1);
+                }
+            }
+
+            &+.fl-radio__label {
+                color: $--radio-checked-font-color;
+            }
+        }
+
+        @include when(focus) {
+            .fl-radio__inner {
+                border-color: $--radio-input-border-color-hover;
+            }
+        }
     }
 }
 </style>

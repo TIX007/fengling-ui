@@ -34,10 +34,15 @@ export const siteData = {
           "level": 2,
           "title": "按钮样式",
           "slug": "按钮样式"
+        },
+        {
+          "level": 2,
+          "title": "带有边框",
+          "slug": "带有边框"
         }
       ],
-      "lastUpdated": "2022/7/26 下午4:59:18",
-      "lastUpdatedTimestamp": 1658825958000
+      "lastUpdated": "2022/8/15 上午10:50:29",
+      "lastUpdatedTimestamp": 1660531829000
     },
     {
       "frontmatter": {},
@@ -69,16 +74,6 @@ export const siteData = {
       ],
       "lastUpdated": "2022/7/26 下午3:50:16",
       "lastUpdatedTimestamp": 1658821816000
-    },
-    {
-      "title": "持续更新中……",
-      "frontmatter": {},
-      "regularPath": "/components/loading/",
-      "relativePath": "components/loading/index.md",
-      "key": "v-06cc56e8",
-      "path": "/components/loading/",
-      "lastUpdated": "2022/7/27 下午4:09:04",
-      "lastUpdatedTimestamp": 1658909344000
     },
     {
       "title": "Button 按钮",
@@ -146,6 +141,16 @@ export const siteData = {
       ],
       "lastUpdated": "2022/7/11 下午1:51:57",
       "lastUpdatedTimestamp": 1657518717000
+    },
+    {
+      "title": "持续更新中……",
+      "frontmatter": {},
+      "regularPath": "/components/loading/",
+      "relativePath": "components/loading/index.md",
+      "key": "v-06cc56e8",
+      "path": "/components/loading/",
+      "lastUpdated": "2022/7/27 下午4:09:04",
+      "lastUpdatedTimestamp": 1658909344000
     },
     {
       "title": "Home",

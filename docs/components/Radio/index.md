@@ -75,7 +75,7 @@
 ## 按钮样式
 按钮样式的单选组合。
 
-:::demo 只需要把`el-radio`元素换成`el-radio-button`元素即可，此外，`Element` 还提供了`size`属性。
+:::demo 只需要把`fl-radio`元素换成`fl-radio-button`元素即可，此外，`Element` 还提供了`size`属性。
   ```vue
 
 <template>
@@ -121,6 +121,49 @@
         radio2: '上海',
         radio3: '上海',
         radio4: '上海'
+      };
+    }
+  }
+</script>
+  ```
+:::
+
+## 带有边框
+
+:::demo 设置`border`属性可以渲染为带有边框的单选框。
+  ```vue
+
+<template>
+  <div>
+    <fl-radio v-model="radio1" label="1" border>备选项1</fl-radio>
+    <fl-radio v-model="radio1" label="2" border>备选项2</fl-radio>
+  </div>
+  <div style="margin-top: 20px">
+    <fl-radio v-model="radio2" label="1" border size="medium">备选项1</fl-radio>
+    <fl-radio v-model="radio2" label="2" border size="medium">备选项2</fl-radio>
+  </div>
+  <div style="margin-top: 20px">
+    <fl-radio-group v-model="radio3" size="small">
+      <fl-radio label="1" border>备选项1</fl-radio>
+      <fl-radio label="2" border disabled>备选项2</fl-radio>
+    </fl-radio-group>
+  </div>
+  <div style="margin-top: 20px">
+    <fl-radio-group v-model="radio4" size="mini" disabled>
+      <fl-radio label="1" border>备选项1</fl-radio>
+      <fl-radio label="2" border>备选项2</fl-radio>
+    </fl-radio-group>
+  </div>
+</template>
+
+<script>
+  export default {
+    data () {
+      return {
+        radio1: '1',
+        radio2: '1',
+        radio3: '1',
+        radio4: '1'
       };
     }
   }

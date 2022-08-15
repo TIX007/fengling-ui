@@ -12,6 +12,11 @@ export default {
       RadioGroup: this
     }
   },
+  inject: {
+    elFormItem: {
+      default: ''
+    }
+  },
   props: {
     // 组件接收到了value值，我们需要触发这个组件的input事件
     // provide 与 inject  用来做祖孙之间得组件通讯
@@ -37,3 +42,13 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+
+.fl-radio-group {
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+  font-size: 0
+}
+</style>
