@@ -75,7 +75,7 @@
 ## 按钮样式
 按钮样式的单选组合。
 
-:::demo 只需要把`fl-radio`元素换成`fl-radio-button`元素即可，此外，`Element` 还提供了`size`属性。
+:::demo 只需要把`fl-radio`元素换成`fl-radio-button`元素即可，此外，`FengLing` 还提供了`size`属性。
   ```vue
 
 <template>

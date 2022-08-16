@@ -9,6 +9,30 @@ import GlobalLayout from "D:\\3三阶段\\项目实战\\vue项目\\UI库\\模板
 injectComponentOption(GlobalLayout, 'mixins', rootMixins)
 export const routes = [
   {
+    name: "v-64c477ee",
+    path: "/components/Checkbox/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-64c477ee").then(next)
+    },
+  },
+  {
+    path: "/components/Checkbox/index.html",
+    redirect: "/components/Checkbox/"
+  },
+  {
+    name: "v-66abb864",
+    path: "/components/button/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-66abb864").then(next)
+    },
+  },
+  {
+    path: "/components/button/index.html",
+    redirect: "/components/button/"
+  },
+  {
     name: "v-ee012d2c",
     path: "/components/Radio/",
     component: GlobalLayout,
@@ -19,18 +43,6 @@ export const routes = [
   {
     path: "/components/Radio/index.html",
     redirect: "/components/Radio/"
-  },
-  {
-    name: "v-77eae9ce",
-    path: "/components/form/",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-77eae9ce").then(next)
-    },
-  },
-  {
-    path: "/components/form/index.html",
-    redirect: "/components/form/"
   },
   {
     name: "v-0661f6d5",
@@ -45,16 +57,16 @@ export const routes = [
     redirect: "/components/"
   },
   {
-    name: "v-66abb864",
-    path: "/components/button/",
+    name: "v-77eae9ce",
+    path: "/components/form/",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-66abb864").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-77eae9ce").then(next)
     },
   },
   {
-    path: "/components/button/index.html",
-    redirect: "/components/button/"
+    path: "/components/form/index.html",
+    redirect: "/components/form/"
   },
   {
     name: "v-06cc56e8",

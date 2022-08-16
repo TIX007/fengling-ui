@@ -8,72 +8,19 @@ export const siteData = {
   "headTags": [],
   "pages": [
     {
-      "title": "Radio 单选框",
+      "title": "Checkbox 多选框",
       "frontmatter": {},
-      "regularPath": "/components/Radio/",
-      "relativePath": "components/Radio/index.md",
-      "key": "v-ee012d2c",
-      "path": "/components/Radio/",
+      "regularPath": "/components/Checkbox/",
+      "relativePath": "components/Checkbox/index.md",
+      "key": "v-64c477ee",
+      "path": "/components/Checkbox/",
       "headers": [
         {
           "level": 2,
           "title": "基础用法",
           "slug": "基础用法"
-        },
-        {
-          "level": 2,
-          "title": "禁用状态",
-          "slug": "禁用状态"
-        },
-        {
-          "level": 2,
-          "title": "单选框组",
-          "slug": "单选框组"
-        },
-        {
-          "level": 2,
-          "title": "按钮样式",
-          "slug": "按钮样式"
-        },
-        {
-          "level": 2,
-          "title": "带有边框",
-          "slug": "带有边框"
         }
-      ],
-      "lastUpdated": "2022/8/15 上午10:50:29",
-      "lastUpdatedTimestamp": 1660531829000
-    },
-    {
-      "frontmatter": {},
-      "regularPath": "/components/form/",
-      "relativePath": "components/form/index.md",
-      "key": "v-77eae9ce",
-      "path": "/components/form/",
-      "lastUpdated": "2022/7/6 下午12:24:28",
-      "lastUpdatedTimestamp": 1657081468000
-    },
-    {
-      "title": "安装",
-      "frontmatter": {},
-      "regularPath": "/components/",
-      "relativePath": "components/index.md",
-      "key": "v-0661f6d5",
-      "path": "/components/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "npm 安装",
-          "slug": "npm-安装"
-        },
-        {
-          "level": 2,
-          "title": "引入 FengLing",
-          "slug": "引入-fengling"
-        }
-      ],
-      "lastUpdated": "2022/7/26 下午3:50:16",
-      "lastUpdatedTimestamp": 1658821816000
+      ]
     },
     {
       "title": "Button 按钮",
@@ -141,6 +88,74 @@ export const siteData = {
       ],
       "lastUpdated": "2022/7/11 下午1:51:57",
       "lastUpdatedTimestamp": 1657518717000
+    },
+    {
+      "title": "Radio 单选框",
+      "frontmatter": {},
+      "regularPath": "/components/Radio/",
+      "relativePath": "components/Radio/index.md",
+      "key": "v-ee012d2c",
+      "path": "/components/Radio/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "基础用法",
+          "slug": "基础用法"
+        },
+        {
+          "level": 2,
+          "title": "禁用状态",
+          "slug": "禁用状态"
+        },
+        {
+          "level": 2,
+          "title": "单选框组",
+          "slug": "单选框组"
+        },
+        {
+          "level": 2,
+          "title": "按钮样式",
+          "slug": "按钮样式"
+        },
+        {
+          "level": 2,
+          "title": "带有边框",
+          "slug": "带有边框"
+        }
+      ],
+      "lastUpdated": "2022/8/15 下午4:34:20",
+      "lastUpdatedTimestamp": 1660552460000
+    },
+    {
+      "title": "安装",
+      "frontmatter": {},
+      "regularPath": "/components/",
+      "relativePath": "components/index.md",
+      "key": "v-0661f6d5",
+      "path": "/components/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "npm 安装",
+          "slug": "npm-安装"
+        },
+        {
+          "level": 2,
+          "title": "引入 FengLing",
+          "slug": "引入-fengling"
+        }
+      ],
+      "lastUpdated": "2022/7/26 下午3:50:16",
+      "lastUpdatedTimestamp": 1658821816000
+    },
+    {
+      "frontmatter": {},
+      "regularPath": "/components/form/",
+      "relativePath": "components/form/index.md",
+      "key": "v-77eae9ce",
+      "path": "/components/form/",
+      "lastUpdated": "2022/7/6 下午12:24:28",
+      "lastUpdatedTimestamp": 1657081468000
     },
     {
       "title": "持续更新中……",
@@ -213,6 +228,10 @@ export const siteData = {
             {
               "title": "Radio 单选框",
               "path": "/components/Radio/"
+            },
+            {
+              "title": "Checkbox 多选框",
+              "path": "/components/Checkbox/"
             },
             {
               "title": "持续更新中……",

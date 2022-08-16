@@ -2,12 +2,7 @@
   <label class="fl-checkbox" :class="{' is-checked':isChecked}">
     <span class="fl-checkbox_input">
       <span class="fl-checkbox_inner"></span>
-      <input type="checkbox"
-      class="fl-checkbox_original"
-      :name="name"
-      v-model="model"
-      :value="label"
-      >
+      <input type="checkbox" class="fl-checkbox_original" :name="name" v-model="model" :value="label">
     </span>
     <span class="fl-checkbox_label">
       <slot></slot>
@@ -63,6 +58,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
   .fl-checkbox{
     color: #606266;
     font-weight: 500;
@@ -132,9 +128,9 @@ export default {
       .fl-checkbox_inner{
         background-color: #409eff;
         border-color: #409eff;
-      }
-      &:after{
-        transform: rotate(45deg) scaleY(1);
+        &:after {
+            transform: rotate(45deg) scaleY(1);
+          }
       }
     }
     .fl-checkbox_label{

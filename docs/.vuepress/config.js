@@ -35,6 +35,7 @@ module.exports = {
                     children: [
                         { title: "Button 按钮", path: '/components/button/' },
                         { title: "Radio 单选框", path: '/components/Radio/' },
+                        { title: "Checkbox 多选框", path: '/components/Checkbox/' },
                         { title: "持续更新中……", path: '/components/loading/' },
                     ],
                 }
