@@ -7,8 +7,8 @@
   ```vue
 
 <template>
-  <fl-radio v-model="radio" label="1">备选项</fl-radio>
-  <fl-radio v-model="radio" label="2">备选项</fl-radio>
+    <fl-radio v-model="radio" label="1">备选项</fl-radio>
+    <fl-radio v-model="radio" label="2">备选项</fl-radio>
 </template>
 
 <script>
@@ -30,8 +30,8 @@
   ```vue
 
 <template>
-  <fl-radio disabled v-model="radio" label="禁用">备选项</fl-radio>
-  <fl-radio disabled v-model="radio" label="选中且禁用">备选项</fl-radio>
+    <fl-radio disabled v-model="radio" label="禁用">备选项</fl-radio>
+    <fl-radio disabled v-model="radio" label="选中且禁用">备选项</fl-radio>
 </template>
 
 <script>
@@ -53,11 +53,11 @@
   ```vue
 
 <template>
-  <fl-radio-group v-model="radio">
-    <fl-radio :label="3">备选项</fl-radio>
-    <fl-radio :label="6">备选项</fl-radio>
-    <fl-radio :label="9">备选项</fl-radio>
-  </fl-radio-group>
+    <fl-radio-group v-model="radio">
+      <fl-radio :label="3">备选项</fl-radio>
+      <fl-radio :label="6">备选项</fl-radio>
+      <fl-radio :label="9">备选项</fl-radio>
+    </fl-radio-group>
 </template>
 
 <script>
@@ -79,38 +79,38 @@
   ```vue
 
 <template>
-  <div>
-    <fl-radio-group v-model="radio1">
-      <fl-radio-button label="上海"></fl-radio-button>
-      <fl-radio-button label="北京"></fl-radio-button>
-      <fl-radio-button label="广州"></fl-radio-button>
-      <fl-radio-button label="深圳"></fl-radio-button>
-    </fl-radio-group>
-  </div>
-  <div style="margin-top: 20px">
-    <fl-radio-group v-model="radio2" size="medium">
-      <fl-radio-button label="上海" ></fl-radio-button>
-      <fl-radio-button label="北京"></fl-radio-button>
-      <fl-radio-button label="广州"></fl-radio-button>
-      <fl-radio-button label="深圳"></fl-radio-button>
-    </fl-radio-group>
-  </div>
-  <div style="margin-top: 20px">
-    <fl-radio-group v-model="radio3" size="small">
-      <fl-radio-button label="上海"></fl-radio-button>
-      <fl-radio-button label="北京" disabled ></fl-radio-button>
-      <fl-radio-button label="广州"></fl-radio-button>
-      <fl-radio-button label="深圳"></fl-radio-button>
-    </fl-radio-group>
-  </div>
-  <div style="margin-top: 20px">
-    <fl-radio-group v-model="radio4" disabled size="mini">
-      <fl-radio-button label="上海"></fl-radio-button>
-      <fl-radio-button label="北京"></fl-radio-button>
-      <fl-radio-button label="广州"></fl-radio-button>
-      <fl-radio-button label="深圳"></fl-radio-button>
-    </fl-radio-group>
-  </div>
+    <div>
+      <fl-radio-group v-model="radio1">
+        <fl-radio-button label="上海"></fl-radio-button>
+        <fl-radio-button label="北京"></fl-radio-button>
+        <fl-radio-button label="广州"></fl-radio-button>
+        <fl-radio-button label="深圳"></fl-radio-button>
+      </fl-radio-group>
+    </div>
+    <div style="margin-top: 20px">
+      <fl-radio-group v-model="radio2" size="medium">
+        <fl-radio-button label="上海" ></fl-radio-button>
+        <fl-radio-button label="北京"></fl-radio-button>
+        <fl-radio-button label="广州"></fl-radio-button>
+        <fl-radio-button label="深圳"></fl-radio-button>
+      </fl-radio-group>
+    </div>
+    <div style="margin-top: 20px">
+      <fl-radio-group v-model="radio3" size="small">
+        <fl-radio-button label="上海"></fl-radio-button>
+        <fl-radio-button label="北京" disabled ></fl-radio-button>
+        <fl-radio-button label="广州"></fl-radio-button>
+        <fl-radio-button label="深圳"></fl-radio-button>
+      </fl-radio-group>
+    </div>
+    <div style="margin-top: 20px">
+      <fl-radio-group v-model="radio4" disabled size="mini">
+        <fl-radio-button label="上海"></fl-radio-button>
+        <fl-radio-button label="北京"></fl-radio-button>
+        <fl-radio-button label="广州"></fl-radio-button>
+        <fl-radio-button label="深圳"></fl-radio-button>
+      </fl-radio-group>
+    </div>
 </template>
 
 <script>
@@ -134,26 +134,26 @@
   ```vue
 
 <template>
-  <div>
-    <fl-radio v-model="radio1" label="1" border>备选项1</fl-radio>
-    <fl-radio v-model="radio1" label="2" border>备选项2</fl-radio>
-  </div>
-  <div style="margin-top: 20px">
-    <fl-radio v-model="radio2" label="1" border size="medium">备选项1</fl-radio>
-    <fl-radio v-model="radio2" label="2" border size="medium">备选项2</fl-radio>
-  </div>
-  <div style="margin-top: 20px">
-    <fl-radio-group v-model="radio3" size="small">
-      <fl-radio label="1" border>备选项1</fl-radio>
-      <fl-radio label="2" border disabled>备选项2</fl-radio>
-    </fl-radio-group>
-  </div>
-  <div style="margin-top: 20px">
-    <fl-radio-group v-model="radio4" size="mini" disabled>
-      <fl-radio label="1" border>备选项1</fl-radio>
-      <fl-radio label="2" border>备选项2</fl-radio>
-    </fl-radio-group>
-  </div>
+    <div>
+      <fl-radio v-model="radio1" label="1" border>备选项1</fl-radio>
+      <fl-radio v-model="radio1" label="2" border>备选项2</fl-radio>
+    </div>
+    <div style="margin-top: 20px">
+      <fl-radio v-model="radio2" label="1" border size="medium">备选项1</fl-radio>
+      <fl-radio v-model="radio2" label="2" border size="medium">备选项2</fl-radio>
+    </div>
+    <div style="margin-top: 20px">
+      <fl-radio-group v-model="radio3" size="small">
+        <fl-radio label="1" border>备选项1</fl-radio>
+        <fl-radio label="2" border disabled>备选项2</fl-radio>
+      </fl-radio-group>
+    </div>
+    <div style="margin-top: 20px">
+      <fl-radio-group v-model="radio4" size="mini" disabled>
+        <fl-radio label="1" border>备选项1</fl-radio>
+        <fl-radio label="2" border>备选项2</fl-radio>
+      </fl-radio-group>
+    </div>
 </template>
 
 <script>

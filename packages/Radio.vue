@@ -1,8 +1,8 @@
 <template>
     <label class="fl-radio"
         :class="[border && radioSize ? 'fl-radio--' + radioSize : '', { 'is-disabled': isDisabled }, { 'is-bordered': border }, { 'is-checked': label == model }]">
-        <span :class="{ 'is-disabled': isDisabled, }" class="fl-radio_input">
-            <span class="fl-radio_inner"></span>
+        <span :class="{ 'is-disabled': isDisabled, }" class="fl-radio__input">
+            <span class="fl-radio__inner"></span>
             <input type="radio" class="fl-radio_original" :value="label" v-model="model" :disabled="isDisabled" />
         </span>
         <span class="fl-radio_label">
@@ -101,8 +101,8 @@ export default {
     -moz-user-select: none;
 
     &:hover {
-        .fl-radio_input {
-            .fl-radio_inner {
+        .fl-radio__input {
+            .fl-radio__inner {
                 border-color: $--checkbox-input-border-color-hover;
                 transition: border-color .2s linear;
             }
@@ -110,7 +110,7 @@ export default {
 
     }
 
-    .fl-radio_input {
+    .fl-radio__input {
         white-space: nowrap;
         cursor: pointer;
         outline: none;
@@ -119,7 +119,7 @@ export default {
         position: relative;
         vertical-align: middle;
 
-        .fl-radio_inner {
+        .fl-radio__inner {
             border: 1px solid #dcdfe6;
             border-radius: 100%;
             width: 14px;
@@ -170,10 +170,10 @@ export default {
 //     background-color: #FFF;
 //     border-color: #EBEEF5;
 
-//     .fl-radio_input {
+//     .fl-radio__input {
 //         cursor: not-allowed;
 
-//         .fl-radio_inner {
+//         .fl-radio__inner {
 //             background-color: #FFF;
 //             cursor: not-allowed;
 //         }
@@ -182,8 +182,8 @@ export default {
 // }
 
 // .fl-radio.is-checked.is-disabled {
-//     .fl-radio_input {
-//         .fl-radio_inner {
+//     .fl-radio__input {
+//         .fl-radio__inner {
 //             border-color: #c0c4cc;
 //             background-color: #c0c4cc;
 
@@ -200,8 +200,8 @@ export default {
 
 // 选中的样式
 // .fl-radio.is-checked {
-//     .fl-radio_input {
-//         .fl-radio_inner {
+//     .fl-radio__input {
+//         .fl-radio__inner {
 //             border-color: #409eff;
 //             background-color: #409eff;
 
@@ -248,7 +248,7 @@ export default {
                 font-size: $--button-medium-font-size;
             }
 
-            .fl-radio_inner {
+            .fl-radio__inner {
                 height: $--radio-bordered-medium-input-height;
                 width: $--radio-bordered-medium-input-width;
             }
@@ -265,7 +265,7 @@ export default {
                 font-size: $--button-small-font-size;
             }
 
-            .fl-radio_inner {
+            .fl-radio__inner {
                 height: $--radio-bordered-small-input-height;
                 width: $--radio-bordered-small-input-width;
             }
@@ -282,7 +282,7 @@ export default {
                 font-size: $--button-mini-font-size;
             }
 
-            .fl-radio_inner {
+            .fl-radio__inner {
                 height: $--radio-bordered-mini-input-height;
                 width: $--radio-bordered-mini-input-width;
             }
@@ -290,23 +290,23 @@ export default {
     }
 
 
-
+// 禁用样式
     @include when(disabled) {
         cursor: not-allowed;
 
         &:hover {
-            .fl-radio_input {
-                .fl-radio_inner {
+            .fl-radio__input {
+                .fl-radio__inner {
                     border-color: $--radio-disabled-input-border-color;
                 }
             }
 
         }
 
-        .fl-radio_input {
+        .fl-radio__input {
             cursor: not-allowed;
 
-            .fl-radio_inner {
+            .fl-radio__inner {
                 background-color: $--radio-disabled-input-fill;
                 border-color: $--radio-disabled-input-border-color;
                 cursor: not-allowed;
@@ -323,10 +323,10 @@ export default {
         }
 
         &.is-checked {
-            .fl-radio_input {
+            .fl-radio__input {
                 cursor: not-allowed;
 
-                .fl-radio_inner {
+                .fl-radio__inner {
                     background-color: $--radio-disabled-checked-input-fill;
                     border-color: $--radio-disabled-checked-input-border-color;
 
@@ -347,8 +347,8 @@ export default {
     }
 
     @include when(checked) {
-        .fl-radio_input {
-            .fl-radio_inner {
+        .fl-radio__input {
+            .fl-radio__inner {
                 border-color: $--radio-checked-input-border-color;
                 background: $--radio-checked-icon-color;
 
@@ -365,7 +365,7 @@ export default {
     }
 
     @include when(focus) {
-        .fl-radio_inner {
+        .fl-radio__inner {
             border-color: $--radio-input-border-color-hover;
         }
     }

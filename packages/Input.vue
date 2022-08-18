@@ -1,7 +1,7 @@
 <template>
-  <div class="fl-input" :class="{'fl-input_suffix':showSuffix}">
+  <div class="fl-input" :class="{'fl-input__suffix':showSuffix}">
    <input
-   class="fl-input_inner"
+   class="fl-radio__inner"
    :class="{'is-disabled': disabled}"
    :placeholder="placeholder"
    :type="showPassword ? (passwordVisible ? 'text' : 'password') : type"
@@ -9,9 +9,9 @@
    :value="value"
    @input="handleInput"
    :disabled=disabled>
-  <span class="fl-input_suffix">
-   <i class="on-input_icon fl-icon-cancel" v-if="clearable && value" @click="clear"></i>
-   <i class="on-input_icon fl-icon-visible" v-if="showPassword && type=='password'" @click="handlePassword"></i>
+  <span class="fl-input__suffix">
+   <i class="on-input__icon fl-icon-cancel" v-if="clearable && value" @click="clear"></i>
+   <i class="on-input__icon fl-icon-visible" v-if="showPassword && type=='password'" @click="handlePassword"></i>
  </span>
  </div>
 </template>
@@ -83,7 +83,7 @@ export default {
     position: relative;
     font-size: 14px;
     display: inline-block;
-    .fl-input_inner{
+    .fl-radio__inner{
       -webkit-appearance: none;
       background-color: #fff;
       background-image: none;
@@ -113,11 +113,11 @@ export default {
     }
   }
   // 后面加suffix的意思是后面如果有后缀的话，触发该样式
-  .fl-input_suffix{
-    .fl-input_inner{
+  .fl-input__suffix{
+    .fl-radio__inner{
       padding-right: 30px;
     }
-    .fl-input_suffix{
+    .fl-input__suffix{
       position: absolute;
       right: 10px;
       height: 100%;

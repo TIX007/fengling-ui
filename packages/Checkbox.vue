@@ -196,6 +196,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+
+
+
 @import "common/var.scss";
 @import "mixins/mixins";
 @import "mixins/utils";
@@ -380,6 +384,11 @@ export default {
       cursor: not-allowed;
     }
   }
+    &:hover {
+      .fl-checkbox__inner {
+        border-color: $--checkbox-disabled-border-color;
+      }
+    }
 
   &.is-checked {
     .fl-checkbox__inner {
