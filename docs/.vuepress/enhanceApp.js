@@ -4,6 +4,7 @@ import FLRadio from '../../packages/Radio.vue'
 import FLRadioGroup from '../../packages/Radio-group.vue'
 import FLRadioButton from '../../packages/Radio-button.vue'
 import FLCheckbox from '../../packages/Checkbox.vue'
+import FLCheckboxGroup from '../../packages/Checkbox-group.vue'
 import FLRow from '../../packages/Row'
 import FlIcon from '../../packages/icon.vue'
 import './styles/index.styl'
@@ -17,6 +18,7 @@ export default  ({ Vue}) => {
                     Vue.component(FLRadioGroup.name, FLRadioGroup);
                     Vue.component(FLRadioButton.name, FLRadioButton);
                     Vue.component(FLCheckbox.name, FLCheckbox);
+                    Vue.component(FLCheckboxGroup.name, FLCheckboxGroup);
                     Vue.component(FLRow.name, FLRow);
                     Vue.component(FlIcon.name, FlIcon);
                     Vue.component(FlButtonGroup.name, FlButtonGroup);
