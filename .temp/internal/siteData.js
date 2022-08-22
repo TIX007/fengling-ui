@@ -5,15 +5,23 @@ export const siteData = {
   "title": "",
   "description": "",
   "base": "/Vue2-FengLing-UI/",
-  "headTags": [],
+  "headTags": [
+    [
+      "link",
+      {
+        "rel": "icon",
+        "href": "./img/logo.png"
+      }
+    ]
+  ],
   "pages": [
     {
       "title": "Button 按钮",
       "frontmatter": {},
-      "regularPath": "/components/button/",
-      "relativePath": "components/button/index.md",
-      "key": "v-66abb864",
-      "path": "/components/button/",
+      "regularPath": "/components/Button/",
+      "relativePath": "components/Button/index.md",
+      "key": "v-e82b9064",
+      "path": "/components/Button/",
       "headers": [
         {
           "level": 2,
@@ -70,9 +78,42 @@ export const siteData = {
           "title": "Slots",
           "slug": "slots"
         }
-      ],
-      "lastUpdated": "2022/7/11 下午1:51:57",
-      "lastUpdatedTimestamp": 1657518717000
+      ]
+    },
+    {
+      "title": "Input 输入框",
+      "frontmatter": {},
+      "regularPath": "/components/Input/",
+      "relativePath": "components/Input/index.md",
+      "key": "v-6c6c724c",
+      "path": "/components/Input/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "基础用法",
+          "slug": "基础用法"
+        },
+        {
+          "level": 2,
+          "title": "禁用状态",
+          "slug": "禁用状态"
+        },
+        {
+          "level": 2,
+          "title": "可清空",
+          "slug": "可清空"
+        },
+        {
+          "level": 2,
+          "title": "密码框",
+          "slug": "密码框"
+        },
+        {
+          "level": 2,
+          "title": "带 icon 的输入框",
+          "slug": "带-icon-的输入框"
+        }
+      ]
     },
     {
       "title": "Checkbox 多选框",
@@ -108,8 +149,81 @@ export const siteData = {
           "slug": "可选项目数量的限制"
         }
       ],
-      "lastUpdated": "2022/8/18 上午8:37:13",
-      "lastUpdatedTimestamp": 1660783033000
+      "lastUpdated": "2022/8/18 下午3:51:09",
+      "lastUpdatedTimestamp": 1660809069000
+    },
+    {
+      "frontmatter": {},
+      "regularPath": "/components/form/",
+      "relativePath": "components/form/index.md",
+      "key": "v-77eae9ce",
+      "path": "/components/form/",
+      "lastUpdated": "2022/7/6 下午12:24:28",
+      "lastUpdatedTimestamp": 1657081468000
+    },
+    {
+      "title": "持续更新中……",
+      "frontmatter": {},
+      "regularPath": "/components/loading/",
+      "relativePath": "components/loading/index.md",
+      "key": "v-06cc56e8",
+      "path": "/components/loading/",
+      "lastUpdated": "2022/7/27 下午4:09:04",
+      "lastUpdatedTimestamp": 1658909344000
+    },
+    {
+      "title": "Home",
+      "frontmatter": {
+        "home": true,
+        "heroImage": "./img/logo.png",
+        "heroText": "FengLingUI",
+        "tagline": "基于Vue2的UI组件库",
+        "actionText": "快速上手 →",
+        "actionLink": "/components/",
+        "features": [
+          {
+            "title": "简洁易上手",
+            "details": "基于element-ui二次开发，简洁易上手。"
+          },
+          {
+            "title": "Vue框架",
+            "details": "基于Vue2的组件库供大家参考学习及使用。"
+          },
+          {
+            "title": "高复用",
+            "details": "提供多种常用的组件并不断更新。"
+          }
+        ],
+        "footer": "FengLingUI 0.1.6"
+      },
+      "regularPath": "/",
+      "relativePath": "index.md",
+      "key": "v-6abbedae",
+      "path": "/",
+      "lastUpdated": "2022/7/27 下午2:46:27",
+      "lastUpdatedTimestamp": 1658904387000
+    },
+    {
+      "title": "安装",
+      "frontmatter": {},
+      "regularPath": "/components/",
+      "relativePath": "components/index.md",
+      "key": "v-0661f6d5",
+      "path": "/components/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "npm 安装",
+          "slug": "npm-安装"
+        },
+        {
+          "level": 2,
+          "title": "引入 FengLing",
+          "slug": "引入-fengling"
+        }
+      ],
+      "lastUpdated": "2022/7/26 下午3:50:16",
+      "lastUpdatedTimestamp": 1658821816000
     },
     {
       "title": "Radio 单选框",
@@ -145,80 +259,8 @@ export const siteData = {
           "slug": "带有边框"
         }
       ],
-      "lastUpdated": "2022/8/16 下午2:29:00",
-      "lastUpdatedTimestamp": 1660631340000
-    },
-    {
-      "title": "持续更新中……",
-      "frontmatter": {},
-      "regularPath": "/components/loading/",
-      "relativePath": "components/loading/index.md",
-      "key": "v-06cc56e8",
-      "path": "/components/loading/",
-      "lastUpdated": "2022/7/27 下午4:09:04",
-      "lastUpdatedTimestamp": 1658909344000
-    },
-    {
-      "frontmatter": {},
-      "regularPath": "/components/form/",
-      "relativePath": "components/form/index.md",
-      "key": "v-77eae9ce",
-      "path": "/components/form/",
-      "lastUpdated": "2022/7/6 下午12:24:28",
-      "lastUpdatedTimestamp": 1657081468000
-    },
-    {
-      "title": "安装",
-      "frontmatter": {},
-      "regularPath": "/components/",
-      "relativePath": "components/index.md",
-      "key": "v-0661f6d5",
-      "path": "/components/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "npm 安装",
-          "slug": "npm-安装"
-        },
-        {
-          "level": 2,
-          "title": "引入 FengLing",
-          "slug": "引入-fengling"
-        }
-      ],
-      "lastUpdated": "2022/7/26 下午3:50:16",
-      "lastUpdatedTimestamp": 1658821816000
-    },
-    {
-      "title": "Home",
-      "frontmatter": {
-        "home": true,
-        "heroText": "FengLingUI",
-        "tagline": "基于Vue2的UI组件库",
-        "actionText": "快速上手 →",
-        "actionLink": "/components/",
-        "features": [
-          {
-            "title": "简洁易上手",
-            "details": "基于element-ui二次开发，简洁易上手。"
-          },
-          {
-            "title": "Vue框架",
-            "details": "基于Vue2的组件库供大家参考学习及使用。"
-          },
-          {
-            "title": "高复用",
-            "details": "提供多种常用的组件并不断更新。"
-          }
-        ],
-        "footer": "FengLingUI 0.1.6"
-      },
-      "regularPath": "/",
-      "relativePath": "index.md",
-      "key": "v-6abbedae",
-      "path": "/",
-      "lastUpdated": "2022/7/27 下午2:46:27",
-      "lastUpdatedTimestamp": 1658904387000
+      "lastUpdated": "2022/8/18 下午3:51:09",
+      "lastUpdatedTimestamp": 1660809069000
     }
   ],
   "themeConfig": {
@@ -245,7 +287,7 @@ export const siteData = {
           "children": [
             {
               "title": "Button 按钮",
-              "path": "/components/button/"
+              "path": "/components/Button/"
             },
             {
               "title": "Radio 单选框",
@@ -254,6 +296,10 @@ export const siteData = {
             {
               "title": "Checkbox 多选框",
               "path": "/components/Checkbox/"
+            },
+            {
+              "title": "Input 输入框",
+              "path": "/components/Input/"
             },
             {
               "title": "持续更新中……",

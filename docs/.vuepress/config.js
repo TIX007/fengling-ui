@@ -11,6 +11,9 @@ module.exports = {
             description: '基于Vue2的UI组件库'
         }
     },
+    head:[
+            ['link', {rel:'icon', href:'./img/logo.png'} ]
+        ],
     themeConfig: {
         lastUpdated: '最后一次更新',
         repo: 'TIX007/fengling-ui',
@@ -20,6 +23,7 @@ module.exports = {
         repoLabel: '查看源码',
         search: true,
         searchMaxSuggestions: 10,
+        
         sidebar: {
             '/components/': [
                 {
@@ -33,9 +37,10 @@ module.exports = {
                     title: '组件',
                     collapsable: true,
                     children: [
-                        { title: "Button 按钮", path: '/components/button/' },
+                        { title: "Button 按钮", path: '/components/Button/' },
                         { title: "Radio 单选框", path: '/components/Radio/' },
                         { title: "Checkbox 多选框", path: '/components/Checkbox/' },
+                        { title: "Input 输入框", path: '/components/Input/' },
                         { title: "持续更新中……", path: '/components/loading/' },
                     ],
                 }

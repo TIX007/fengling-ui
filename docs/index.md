@@ -1,6 +1,6 @@
 ---
 home: true
-# heroImage: /hero.png
+heroImage: ./img/logo.png
 heroText: FengLingUI
 tagline: 基于Vue2的UI组件库
 actionText: 快速上手 →
