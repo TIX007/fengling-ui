@@ -9,18 +9,6 @@ import GlobalLayout from "D:\\3三阶段\\项目实战\\vue项目\\UI库\\模板
 injectComponentOption(GlobalLayout, 'mixins', rootMixins)
 export const routes = [
   {
-    name: "v-e82b9064",
-    path: "/components/Button/",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-e82b9064").then(next)
-    },
-  },
-  {
-    path: "/components/Button/index.html",
-    redirect: "/components/Button/"
-  },
-  {
     name: "v-6c6c724c",
     path: "/components/Input/",
     component: GlobalLayout,
@@ -33,16 +21,16 @@ export const routes = [
     redirect: "/components/Input/"
   },
   {
-    name: "v-64c477ee",
-    path: "/components/Checkbox/",
+    name: "v-e82b9064",
+    path: "/components/Button/",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-64c477ee").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-e82b9064").then(next)
     },
   },
   {
-    path: "/components/Checkbox/index.html",
-    redirect: "/components/Checkbox/"
+    path: "/components/Button/index.html",
+    redirect: "/components/Button/"
   },
   {
     name: "v-77eae9ce",
@@ -55,6 +43,18 @@ export const routes = [
   {
     path: "/components/form/index.html",
     redirect: "/components/form/"
+  },
+  {
+    name: "v-ee012d2c",
+    path: "/components/Radio/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-ee012d2c").then(next)
+    },
+  },
+  {
+    path: "/components/Radio/index.html",
+    redirect: "/components/Radio/"
   },
   {
     name: "v-06cc56e8",
@@ -93,16 +93,16 @@ export const routes = [
     redirect: "/components/"
   },
   {
-    name: "v-ee012d2c",
-    path: "/components/Radio/",
+    name: "v-64c477ee",
+    path: "/components/Checkbox/",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-ee012d2c").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-64c477ee").then(next)
     },
   },
   {
-    path: "/components/Radio/index.html",
-    redirect: "/components/Radio/"
+    path: "/components/Checkbox/index.html",
+    redirect: "/components/Checkbox/"
   },
   {
     path: '*',

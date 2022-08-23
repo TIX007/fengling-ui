@@ -145,3 +145,164 @@ export default {
 ```
 
 :::
+
+## 文本域
+
+用于输入多行文本信息，通过将 `type` 属性的值指定为 `textarea`。
+
+:::demo 文本域高度可通过 `rows` 属性控制
+
+```vue
+<fl-input
+  type="textarea"
+  :rows="2"
+  placeholder="请输入内容"
+  v-model="textarea">
+</fl-input>
+
+<script>
+export default {
+  data() {
+    return {
+      textarea: ''
+    }
+  }
+}
+</script>
+```
+
+:::
+
+## 可自适应文本高度的文本域
+
+通过设置 autosize 属性可以使得文本域的高度能够根据文本内容自动进行调整，并且 autosize 还可以设定为一个对象，指定最小行数和最大行数。
+
+:::demo 
+
+```vue
+<fl-input
+  type="textarea"
+  autosize
+  placeholder="请输入内容"
+  v-model="textarea1">
+</fl-input>
+<div style="margin: 20px 0;"></div>
+<fl-input
+  type="textarea"
+  :autosize="{ minRows: 2, maxRows: 4}"
+  placeholder="请输入内容"
+  v-model="textarea2">
+</fl-input>
+
+<script>
+export default {
+  data() {
+    return {
+      textarea1: '',
+      textarea2: ''
+    }
+  }
+}
+</script>
+```
+
+:::
+
+## 复合型输入框
+
+可前置或后置元素，一般为标签或按钮
+
+:::demo 可通过 `slot` 来指定在 `input` 中前置或者后置内容。
+
+```vue
+<div>
+  <fl-input placeholder="请输入内容" v-model="input1">
+    <template slot="prepend">Http://</template>
+  </fl-input>
+</div>
+<div style="margin-top: 15px;">
+  <fl-input placeholder="请输入内容" v-model="input2">
+    <template slot="append">.com</template>
+  </fl-input>
+</div>
+<div style="margin-top: 15px;">
+  <fl-input placeholder="请输入内容" v-model="input3" class="input-with-select">
+    <fl-select v-model="select" slot="prepend" placeholder="请选择">
+      <fl-option label="餐厅名" value="1"></fl-option>
+      <fl-option label="订单号" value="2"></fl-option>
+      <fl-option label="用户电话" value="3"></fl-option>
+    </fl-select>
+    <fl-button slot="append" icon="fl-icon-search"></fl-button>
+  </fl-input>
+</div>
+<style>
+  .fl-select .fl-input {
+    width: 130px;
+  }
+  .input-with-select .fl-input-group__prepend {
+    background-color: #fff;
+  }
+</style>
+<script>
+export default {
+  data() {
+    return {
+      input1: '',
+      input2: '',
+      input3: '',
+      select: ''
+    }
+  }
+}
+</script>
+```
+
+:::
+
+
+## 尺寸
+
+:::demo 可通过 `size` 属性指定输入框的尺寸，除了默认的大小外，还提供了 `large`、`small` 和 `mini` 三种尺寸。
+
+```vue
+<div class="demo-input-size">
+  <fl-input
+    placeholder="请输入内容"
+    suffix-icon="fl-icon-date"
+    v-model="input1">
+  </fl-input>
+  <fl-input
+    size="medium"
+    placeholder="请输入内容"
+    suffix-icon="fl-icon-date"
+    v-model="input2">
+  </fl-input>
+  <fl-input
+    size="small"
+    placeholder="请输入内容"
+    suffix-icon="fl-icon-date"
+    v-model="input3">
+  </fl-input>
+  <fl-input
+    size="mini"
+    placeholder="请输入内容"
+    suffix-icon="fl-icon-date"
+    v-model="input4">
+  </fl-input>
+</div>
+
+<script>
+export default {
+  data() {
+    return {
+      input1: '',
+      input2: '',
+      input3: '',
+      input4: ''
+    }
+  }
+}
+</script>
+```
+
+:::

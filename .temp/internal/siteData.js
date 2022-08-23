@@ -16,6 +16,63 @@ export const siteData = {
   ],
   "pages": [
     {
+      "title": "Input 输入框",
+      "frontmatter": {},
+      "regularPath": "/components/Input/",
+      "relativePath": "components/Input/index.md",
+      "key": "v-6c6c724c",
+      "path": "/components/Input/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "基础用法",
+          "slug": "基础用法"
+        },
+        {
+          "level": 2,
+          "title": "禁用状态",
+          "slug": "禁用状态"
+        },
+        {
+          "level": 2,
+          "title": "可清空",
+          "slug": "可清空"
+        },
+        {
+          "level": 2,
+          "title": "密码框",
+          "slug": "密码框"
+        },
+        {
+          "level": 2,
+          "title": "带 icon 的输入框",
+          "slug": "带-icon-的输入框"
+        },
+        {
+          "level": 2,
+          "title": "文本域",
+          "slug": "文本域"
+        },
+        {
+          "level": 2,
+          "title": "可自适应文本高度的文本域",
+          "slug": "可自适应文本高度的文本域"
+        },
+        {
+          "level": 2,
+          "title": "复合型输入框",
+          "slug": "复合型输入框"
+        },
+        {
+          "level": 2,
+          "title": "尺寸",
+          "slug": "尺寸"
+        }
+      ],
+      "lastUpdated": "2022/8/22 下午4:56:34",
+      "lastUpdatedTimestamp": 1661158594000
+    },
+    {
       "title": "Button 按钮",
       "frontmatter": {},
       "regularPath": "/components/Button/",
@@ -81,78 +138,6 @@ export const siteData = {
       ]
     },
     {
-      "title": "Input 输入框",
-      "frontmatter": {},
-      "regularPath": "/components/Input/",
-      "relativePath": "components/Input/index.md",
-      "key": "v-6c6c724c",
-      "path": "/components/Input/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "基础用法",
-          "slug": "基础用法"
-        },
-        {
-          "level": 2,
-          "title": "禁用状态",
-          "slug": "禁用状态"
-        },
-        {
-          "level": 2,
-          "title": "可清空",
-          "slug": "可清空"
-        },
-        {
-          "level": 2,
-          "title": "密码框",
-          "slug": "密码框"
-        },
-        {
-          "level": 2,
-          "title": "带 icon 的输入框",
-          "slug": "带-icon-的输入框"
-        }
-      ]
-    },
-    {
-      "title": "Checkbox 多选框",
-      "frontmatter": {},
-      "regularPath": "/components/Checkbox/",
-      "relativePath": "components/Checkbox/index.md",
-      "key": "v-64c477ee",
-      "path": "/components/Checkbox/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "基础用法",
-          "slug": "基础用法"
-        },
-        {
-          "level": 2,
-          "title": "禁用状态",
-          "slug": "禁用状态"
-        },
-        {
-          "level": 2,
-          "title": "多选框组",
-          "slug": "多选框组"
-        },
-        {
-          "level": 2,
-          "title": "indeterminate 状态",
-          "slug": "indeterminate-状态"
-        },
-        {
-          "level": 2,
-          "title": "可选项目数量的限制",
-          "slug": "可选项目数量的限制"
-        }
-      ],
-      "lastUpdated": "2022/8/18 下午3:51:09",
-      "lastUpdatedTimestamp": 1660809069000
-    },
-    {
       "frontmatter": {},
       "regularPath": "/components/form/",
       "relativePath": "components/form/index.md",
@@ -160,6 +145,43 @@ export const siteData = {
       "path": "/components/form/",
       "lastUpdated": "2022/7/6 下午12:24:28",
       "lastUpdatedTimestamp": 1657081468000
+    },
+    {
+      "title": "Radio 单选框",
+      "frontmatter": {},
+      "regularPath": "/components/Radio/",
+      "relativePath": "components/Radio/index.md",
+      "key": "v-ee012d2c",
+      "path": "/components/Radio/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "基础用法",
+          "slug": "基础用法"
+        },
+        {
+          "level": 2,
+          "title": "禁用状态",
+          "slug": "禁用状态"
+        },
+        {
+          "level": 2,
+          "title": "单选框组",
+          "slug": "单选框组"
+        },
+        {
+          "level": 2,
+          "title": "按钮样式",
+          "slug": "按钮样式"
+        },
+        {
+          "level": 2,
+          "title": "带有边框",
+          "slug": "带有边框"
+        }
+      ],
+      "lastUpdated": "2022/8/18 下午3:51:09",
+      "lastUpdatedTimestamp": 1660809069000
     },
     {
       "title": "持续更新中……",
@@ -200,8 +222,8 @@ export const siteData = {
       "relativePath": "index.md",
       "key": "v-6abbedae",
       "path": "/",
-      "lastUpdated": "2022/7/27 下午2:46:27",
-      "lastUpdatedTimestamp": 1658904387000
+      "lastUpdated": "2022/8/22 下午4:56:34",
+      "lastUpdatedTimestamp": 1661158594000
     },
     {
       "title": "安装",
@@ -226,12 +248,12 @@ export const siteData = {
       "lastUpdatedTimestamp": 1658821816000
     },
     {
-      "title": "Radio 单选框",
+      "title": "Checkbox 多选框",
       "frontmatter": {},
-      "regularPath": "/components/Radio/",
-      "relativePath": "components/Radio/index.md",
-      "key": "v-ee012d2c",
-      "path": "/components/Radio/",
+      "regularPath": "/components/Checkbox/",
+      "relativePath": "components/Checkbox/index.md",
+      "key": "v-64c477ee",
+      "path": "/components/Checkbox/",
       "headers": [
         {
           "level": 2,
@@ -245,18 +267,18 @@ export const siteData = {
         },
         {
           "level": 2,
-          "title": "单选框组",
-          "slug": "单选框组"
+          "title": "多选框组",
+          "slug": "多选框组"
         },
         {
           "level": 2,
-          "title": "按钮样式",
-          "slug": "按钮样式"
+          "title": "indeterminate 状态",
+          "slug": "indeterminate-状态"
         },
         {
           "level": 2,
-          "title": "带有边框",
-          "slug": "带有边框"
+          "title": "可选项目数量的限制",
+          "slug": "可选项目数量的限制"
         }
       ],
       "lastUpdated": "2022/8/18 下午3:51:09",
