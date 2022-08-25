@@ -2,15 +2,23 @@
   <div
     :class="[
       type === 'textarea' ? 'fl-textarea' : 'fl-input',
+      inputSize ? 'fl-input--' + inputSize : '',
       {
         'fl-input--suffix': $slots.suffix || showSuffix || suffixIcon,
         'fl-input--prefix': $slots.prefix || prefixIcon,
+        'fl-input-group': $slots.prepend || $slots.append,
+        'fl-input-group--append': $slots.append,
+        'fl-input-group--prepend': $slots.prepend,
       },
     ]"
   >
     <template v-if="type !== 'textarea'">
+      <!-- 前置元素 -->
+      <div class="fl-input-group__prepend" v-if="$slots.prepend">
+        <slot name="prepend"></slot>
+      </div>
       <input
-        class="fl-radio__inner"
+        class="fl-input__inner"
         :class="{ 'is-disabled': disabled }"
         :placeholder="placeholder"
         :type="showPassword ? (passwordVisible ? 'text' : 'password') : type"
@@ -18,6 +26,7 @@
         :value="value"
         @input="handleInput"
         :disabled="disabled"
+        :readonly="readonly"
       />
       <!-- 前置内容 -->
       <span class="fl-input__prefix" v-if="$slots.prefix || prefixIcon">
@@ -41,6 +50,10 @@
           @click="handlePassword"
         ></i>
       </span>
+      <!-- 后置元素 -->
+      <div class="fl-input-group__append" v-if="$slots.append">
+        <slot name="append"></slot>
+      </div>
     </template>
     <textarea
       v-else
@@ -140,6 +153,9 @@ export default {
     },
   },
   computed: {
+    _flFormItemSize() {
+      return (this.flFormItem || {}).flFormItemSize;
+    },
     nativeInputValue() {
       return this.value === null || this.value === undefined
         ? ""
@@ -150,6 +166,9 @@ export default {
     },
     textareaStyle() {
       return merge({}, this.textareaCalcStyle, { resize: this.resize });
+    },
+    inputSize() {
+      return this.size || this._flFormItemSize || (this.$ELEMENT || {}).size;
     },
     isWordLimitVisible() {
       return (
@@ -267,11 +286,12 @@ export default {
   font-size: 14px;
   display: inline-block;
 
-  .fl-radio__inner {
+  .fl-input__inner {
     -webkit-appearance: none;
     background-color: #fff;
     background-image: none;
-    border: 1px solid #dcdfe6;
+    // border: 1px solid #dcdfe6;
+    border: $--input-border;
     border-radius: 4px;
     box-sizing: border-box;
     color: #606266;
@@ -281,8 +301,13 @@ export default {
     line-height: 40px;
     outline: none;
     padding: 0 15px;
-    transition: border-color 0.2s cubic-bezier(0.645, 045, 0.355, 1);
+    transition: $--border-transition-base;
+    // transition: border-color 0.2s cubic-bezier(0.645, 045, 0.355, 1);
     width: 100%;
+
+    &:hover {
+      border-color: $--input-hover-border;
+    }
 
     &:focus {
       outline: none;
@@ -301,7 +326,7 @@ export default {
 
 // 后面加suffix的意思是后面如果有后缀的话，触发该样式
 .fl-input--suffix {
-  .fl-radio__inner {
+  .fl-input__inner {
     padding-right: 30px;
   }
 
@@ -323,6 +348,10 @@ export default {
       cursor: pointer;
       transition: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 
+      &:hover {
+        color: $--input-clear-hover-color;
+      }
+
       &::after {
         content: "";
         height: 100%;
@@ -335,7 +364,7 @@ export default {
 }
 
 .fl-input--prefix {
-  .fl-radio__inner {
+  .fl-input__inner {
     padding-left: 30px;
   }
 
@@ -432,6 +461,144 @@ export default {
 
     .fl-input__count {
       color: $--color-danger;
+    }
+  }
+}
+
+@include b(input) {
+  @include m(medium) {
+    font-size: $--input-medium-font-size;
+
+    @include e(inner) {
+      height: $--input-medium-height;
+      line-height: $--input-medium-height;
+    }
+
+    .fl-input__suffix {
+      line-height: $--input-medium-height;
+
+      .fl-input__icon {
+        line-height: $--input-medium-height;
+      }
+    }
+  }
+
+  @include m(small) {
+    font-size: $--input-small-font-size;
+
+    @include e(inner) {
+      height: $--input-small-height;
+      line-height: $--input-small-height;
+    }
+
+    .fl-input__suffix {
+      line-height: $--input-small-height;
+
+      .fl-input__icon {
+        line-height: $--input-small-height;
+      }
+    }
+  }
+
+  @include m(mini) {
+    font-size: $--input-mini-font-size;
+
+    @include e(inner) {
+      height: $--input-mini-height;
+      line-height: $--input-mini-height;
+    }
+
+    .fl-input__suffix {
+      line-height: $--input-mini-height;
+
+      .fl-input__icon {
+        line-height: $--input-mini-height;
+      }
+    }
+  }
+}
+
+@include b(input-group) {
+  line-height: normal;
+  display: inline-table;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+
+  > .fl-input__inner {
+    vertical-align: middle;
+    display: table-cell;
+  }
+
+  @include e((append, prepend)) {
+    background-color: $--background-color-base;
+    color: $--color-info;
+    vertical-align: middle;
+    display: table-cell;
+    position: relative;
+    border: $--border-base;
+    border-radius: $--input-border-radius;
+    padding: 0 20px;
+    width: 1px;
+    white-space: nowrap;
+
+    &:focus {
+      outline: none;
+    }
+
+    .fl-select,
+    .fl-button {
+      display: inline-block;
+      margin: -10px -20px;
+    }
+
+    button.fl-button,
+    div.fl-select .fl-input__inner,
+    div.fl-select:hover .fl-input__inner {
+      border-color: transparent;
+      background-color: transparent;
+      color: inherit;
+      border-top: 0;
+      border-bottom: 0;
+    }
+
+    .fl-button,
+    .fl-input {
+      font-size: inherit;
+    }
+  }
+
+  @include e(prepend) {
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  @include e(append) {
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  @include m(prepend) {
+    .fl-input__inner {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .fl-select .fl-input.is-focus .fl-input__inner {
+      border-color: transparent;
+    }
+  }
+
+  @include m(append) {
+    .fl-input__inner {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .fl-select .fl-input.is-focus .fl-input__inner {
+      border-color: transparent;
     }
   }
 }

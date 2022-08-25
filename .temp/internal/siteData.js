@@ -16,63 +16,6 @@ export const siteData = {
   ],
   "pages": [
     {
-      "title": "Input 输入框",
-      "frontmatter": {},
-      "regularPath": "/components/Input/",
-      "relativePath": "components/Input/index.md",
-      "key": "v-6c6c724c",
-      "path": "/components/Input/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "基础用法",
-          "slug": "基础用法"
-        },
-        {
-          "level": 2,
-          "title": "禁用状态",
-          "slug": "禁用状态"
-        },
-        {
-          "level": 2,
-          "title": "可清空",
-          "slug": "可清空"
-        },
-        {
-          "level": 2,
-          "title": "密码框",
-          "slug": "密码框"
-        },
-        {
-          "level": 2,
-          "title": "带 icon 的输入框",
-          "slug": "带-icon-的输入框"
-        },
-        {
-          "level": 2,
-          "title": "文本域",
-          "slug": "文本域"
-        },
-        {
-          "level": 2,
-          "title": "可自适应文本高度的文本域",
-          "slug": "可自适应文本高度的文本域"
-        },
-        {
-          "level": 2,
-          "title": "复合型输入框",
-          "slug": "复合型输入框"
-        },
-        {
-          "level": 2,
-          "title": "尺寸",
-          "slug": "尺寸"
-        }
-      ],
-      "lastUpdated": "2022/8/22 下午4:56:34",
-      "lastUpdatedTimestamp": 1661158594000
-    },
-    {
       "title": "Button 按钮",
       "frontmatter": {},
       "regularPath": "/components/Button/",
@@ -138,21 +81,12 @@ export const siteData = {
       ]
     },
     {
+      "title": "Input 输入框",
       "frontmatter": {},
-      "regularPath": "/components/form/",
-      "relativePath": "components/form/index.md",
-      "key": "v-77eae9ce",
-      "path": "/components/form/",
-      "lastUpdated": "2022/7/6 下午12:24:28",
-      "lastUpdatedTimestamp": 1657081468000
-    },
-    {
-      "title": "Radio 单选框",
-      "frontmatter": {},
-      "regularPath": "/components/Radio/",
-      "relativePath": "components/Radio/index.md",
-      "key": "v-ee012d2c",
-      "path": "/components/Radio/",
+      "regularPath": "/components/Input/",
+      "relativePath": "components/Input/index.md",
+      "key": "v-6c6c724c",
+      "path": "/components/Input/",
       "headers": [
         {
           "level": 2,
@@ -166,22 +100,78 @@ export const siteData = {
         },
         {
           "level": 2,
-          "title": "单选框组",
-          "slug": "单选框组"
+          "title": "可清空",
+          "slug": "可清空"
         },
         {
           "level": 2,
-          "title": "按钮样式",
-          "slug": "按钮样式"
+          "title": "密码框",
+          "slug": "密码框"
         },
         {
           "level": 2,
-          "title": "带有边框",
-          "slug": "带有边框"
+          "title": "带 icon 的输入框",
+          "slug": "带-icon-的输入框"
+        },
+        {
+          "level": 2,
+          "title": "文本域",
+          "slug": "文本域"
+        },
+        {
+          "level": 2,
+          "title": "可自适应文本高度的文本域",
+          "slug": "可自适应文本高度的文本域"
+        },
+        {
+          "level": 2,
+          "title": "复合型输入框",
+          "slug": "复合型输入框"
+        },
+        {
+          "level": 2,
+          "title": "尺寸",
+          "slug": "尺寸"
+        },
+        {
+          "level": 2,
+          "title": "带输入建议",
+          "slug": "带输入建议"
         }
       ],
-      "lastUpdated": "2022/8/18 下午3:51:09",
-      "lastUpdatedTimestamp": 1660809069000
+      "lastUpdated": "2022/8/23 下午4:52:52",
+      "lastUpdatedTimestamp": 1661244772000
+    },
+    {
+      "frontmatter": {},
+      "regularPath": "/components/form/",
+      "relativePath": "components/form/index.md",
+      "key": "v-77eae9ce",
+      "path": "/components/form/",
+      "lastUpdated": "2022/7/6 下午12:24:28",
+      "lastUpdatedTimestamp": 1657081468000
+    },
+    {
+      "title": "安装",
+      "frontmatter": {},
+      "regularPath": "/components/",
+      "relativePath": "components/index.md",
+      "key": "v-0661f6d5",
+      "path": "/components/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "npm 安装",
+          "slug": "npm-安装"
+        },
+        {
+          "level": 2,
+          "title": "引入 FengLing",
+          "slug": "引入-fengling"
+        }
+      ],
+      "lastUpdated": "2022/7/26 下午3:50:16",
+      "lastUpdatedTimestamp": 1658821816000
     },
     {
       "title": "持续更新中……",
@@ -226,26 +216,41 @@ export const siteData = {
       "lastUpdatedTimestamp": 1661158594000
     },
     {
-      "title": "安装",
+      "title": "Radio 单选框",
       "frontmatter": {},
-      "regularPath": "/components/",
-      "relativePath": "components/index.md",
-      "key": "v-0661f6d5",
-      "path": "/components/",
+      "regularPath": "/components/Radio/",
+      "relativePath": "components/Radio/index.md",
+      "key": "v-ee012d2c",
+      "path": "/components/Radio/",
       "headers": [
         {
           "level": 2,
-          "title": "npm 安装",
-          "slug": "npm-安装"
+          "title": "基础用法",
+          "slug": "基础用法"
         },
         {
           "level": 2,
-          "title": "引入 FengLing",
-          "slug": "引入-fengling"
+          "title": "禁用状态",
+          "slug": "禁用状态"
+        },
+        {
+          "level": 2,
+          "title": "单选框组",
+          "slug": "单选框组"
+        },
+        {
+          "level": 2,
+          "title": "按钮样式",
+          "slug": "按钮样式"
+        },
+        {
+          "level": 2,
+          "title": "带有边框",
+          "slug": "带有边框"
         }
       ],
-      "lastUpdated": "2022/7/26 下午3:50:16",
-      "lastUpdatedTimestamp": 1658821816000
+      "lastUpdated": "2022/8/18 下午3:51:09",
+      "lastUpdatedTimestamp": 1660809069000
     },
     {
       "title": "Checkbox 多选框",
@@ -283,6 +288,21 @@ export const siteData = {
       ],
       "lastUpdated": "2022/8/18 下午3:51:09",
       "lastUpdatedTimestamp": 1660809069000
+    },
+    {
+      "title": "Select 选择器",
+      "frontmatter": {},
+      "regularPath": "/components/Select/",
+      "relativePath": "components/Select/index.md",
+      "key": "v-cc9e83e4",
+      "path": "/components/Select/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "基础用法",
+          "slug": "基础用法"
+        }
+      ]
     }
   ],
   "themeConfig": {
@@ -322,6 +342,10 @@ export const siteData = {
             {
               "title": "Input 输入框",
               "path": "/components/Input/"
+            },
+            {
+              "title": "Select 选择器",
+              "path": "/components/Select/"
             },
             {
               "title": "持续更新中……",

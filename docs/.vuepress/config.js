@@ -41,6 +41,7 @@ module.exports = {
                         { title: "Radio 单选框", path: '/components/Radio/' },
                         { title: "Checkbox 多选框", path: '/components/Checkbox/' },
                         { title: "Input 输入框", path: '/components/Input/' },
+                        { title: "Select 选择器", path: '/components/Select/' },
                         { title: "持续更新中……", path: '/components/loading/' },
                     ],
                 }

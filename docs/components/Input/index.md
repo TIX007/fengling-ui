@@ -306,3 +306,38 @@ export default {
 ```
 
 :::
+
+## 带输入建议
+
+根据输入内容提供对应的输入建议
+
+:::demo `autocomplete` 是一个可带输入建议的输入框组件，`fetch-suggestions` 是一个返回输入建议的方法属性，如 `querySearch(queryString, cb)`，在该方法中你可以在你的输入建议数据准备好时通过 `cb(data)` 返回到 `autocomplete` 组件中。
+
+```vue
+<fl-input
+  type="textarea"
+  autosize
+  placeholder="请输入内容"
+  v-model="textarea1">
+</fl-input>
+<div style="margin: 20px 0;"></div>
+<fl-input
+  type="textarea"
+  :autosize="{ minRows: 2, maxRows: 4}"
+  placeholder="请输入内容"
+  v-model="textarea2">
+</fl-input>
+
+<script>
+export default {
+  data() {
+    return {
+      textarea1: '',
+      textarea2: ''
+    }
+  }
+}
+</script>
+```
+
+:::

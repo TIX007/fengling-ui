@@ -9,18 +9,6 @@ import GlobalLayout from "D:\\3三阶段\\项目实战\\vue项目\\UI库\\模板
 injectComponentOption(GlobalLayout, 'mixins', rootMixins)
 export const routes = [
   {
-    name: "v-6c6c724c",
-    path: "/components/Input/",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-6c6c724c").then(next)
-    },
-  },
-  {
-    path: "/components/Input/index.html",
-    redirect: "/components/Input/"
-  },
-  {
     name: "v-e82b9064",
     path: "/components/Button/",
     component: GlobalLayout,
@@ -31,6 +19,18 @@ export const routes = [
   {
     path: "/components/Button/index.html",
     redirect: "/components/Button/"
+  },
+  {
+    name: "v-6c6c724c",
+    path: "/components/Input/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-6c6c724c").then(next)
+    },
+  },
+  {
+    path: "/components/Input/index.html",
+    redirect: "/components/Input/"
   },
   {
     name: "v-77eae9ce",
@@ -45,16 +45,16 @@ export const routes = [
     redirect: "/components/form/"
   },
   {
-    name: "v-ee012d2c",
-    path: "/components/Radio/",
+    name: "v-0661f6d5",
+    path: "/components/",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-ee012d2c").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-0661f6d5").then(next)
     },
   },
   {
-    path: "/components/Radio/index.html",
-    redirect: "/components/Radio/"
+    path: "/components/index.html",
+    redirect: "/components/"
   },
   {
     name: "v-06cc56e8",
@@ -81,16 +81,16 @@ export const routes = [
     redirect: "/"
   },
   {
-    name: "v-0661f6d5",
-    path: "/components/",
+    name: "v-ee012d2c",
+    path: "/components/Radio/",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-0661f6d5").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-ee012d2c").then(next)
     },
   },
   {
-    path: "/components/index.html",
-    redirect: "/components/"
+    path: "/components/Radio/index.html",
+    redirect: "/components/Radio/"
   },
   {
     name: "v-64c477ee",
@@ -103,6 +103,18 @@ export const routes = [
   {
     path: "/components/Checkbox/index.html",
     redirect: "/components/Checkbox/"
+  },
+  {
+    name: "v-cc9e83e4",
+    path: "/components/Select/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-cc9e83e4").then(next)
+    },
+  },
+  {
+    path: "/components/Select/index.html",
+    redirect: "/components/Select/"
   },
   {
     path: '*',

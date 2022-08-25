@@ -13,6 +13,7 @@ import CheckboxGroup from './Checkbox-group'
 import Form from './Form'
 import FormItem from './Form-item'
 import FlRow from './Row'
+import FlCol from './Col'
 import FlIcon from './icon.vue'
 import ButtonGroup from './Button-group.vue'
 import './fonts/iconfont.css'
@@ -30,6 +31,7 @@ const components = [
   Form,
   FormItem,
   FlRow,
+  FlCol,
   FlIcon,
   ButtonGroup
 ]
