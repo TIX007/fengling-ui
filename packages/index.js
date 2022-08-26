@@ -9,7 +9,7 @@ import Radio from './Radio'
 import RadioGroup from './Radio-group'
 import RadioButton from './Radio-button'
 import Select from './Select'
-import SelectDropdown from './Select-dropdown'
+// import SelectDropdown from './Select-dropdown'
 import Switch from './Switch'
 import CheckboxGroup from './Checkbox-group'
 import Form from './Form'
@@ -29,7 +29,7 @@ const components = [
   RadioGroup,
   RadioButton,
   Select,
-  SelectDropdown,
+  // SelectDropdown,
   Switch,
   CheckboxGroup,
   Form,

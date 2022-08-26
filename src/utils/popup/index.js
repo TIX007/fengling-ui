@@ -1,5 +1,5 @@
 
-import PopupManager from './PopupManager'
+import PopupManager from './popup-manager'
 
 
 export {

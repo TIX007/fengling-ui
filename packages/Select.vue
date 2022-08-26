@@ -7,12 +7,14 @@
         <i v-if="showClose" class="fl-select__caret fl-input__icon fl-icon-circle-close" @click="handleClearClick"></i>
       </template>
     </fl-input>
-
+    
   </div>
 </template>
 
 <script>
 import FlInput from './Input.vue'
+import FlSelectMenu from './Select-dropdown.vue';
+import { getValueByPath, valueEquals, isIE, isEdge } from '../src/utils/util';
 export default {
 
   name: 'FlSelect',
@@ -20,7 +22,8 @@ export default {
   componentName: 'FlSelect',
 
   components: {
-    FlInput
+    FlInput,
+    FlSelectMenu
   },
 
   props: {
@@ -150,6 +153,11 @@ export default {
     handleClearClick(event) {
       this.deleteSelected(event);
     },
+    emitChange(val) {
+        if (!valueEquals(this.value, val)) {
+          this.$emit('change', val);
+        }
+      },
 
     deleteSelected(event) {
       event.stopPropagation();
@@ -159,6 +167,61 @@ export default {
       this.visible = false;
       this.$emit('clear');
     },
+
+    getOption(value) {
+        let option;
+        const isObject = Object.prototype.toString.call(value).toLowerCase() === '[object object]';
+        const isNull = Object.prototype.toString.call(value).toLowerCase() === '[object null]';
+        const isUndefined = Object.prototype.toString.call(value).toLowerCase() === '[object undefined]';
+
+        for (let i = this.cachedOptions.length - 1; i >= 0; i--) {
+          const cachedOption = this.cachedOptions[i];
+          const isEqual = isObject
+            ? getValueByPath(cachedOption.value, this.valueKey) === getValueByPath(value, this.valueKey)
+            : cachedOption.value === value;
+          if (isEqual) {
+            option = cachedOption;
+            break;
+          }
+        }
+        if (option) return option;
+        const label = (!isObject && !isNull && !isUndefined)
+          ? String(value) : '';
+        let newOption = {
+          value: value,
+          currentLabel: label
+        };
+        if (this.multiple) {
+          newOption.hitState = false;
+        }
+        return newOption;
+      },
+
+      setSelected() {
+        if (!this.multiple) {
+          let option = this.getOption(this.value);
+          if (option.created) {
+            this.createdLabel = option.currentLabel;
+            this.createdSelected = true;
+          } else {
+            this.createdSelected = false;
+          }
+          this.selectedLabel = option.currentLabel;
+          this.selected = option;
+          if (this.filterable) this.query = this.selectedLabel;
+          return;
+        }
+        let result = [];
+        if (Array.isArray(this.value)) {
+          this.value.forEach(value => {
+            result.push(this.getOption(value));
+          });
+        }
+        this.selected = result;
+        this.$nextTick(() => {
+          this.resetInputHeight();
+        });
+      },
   }
 }
 </script>

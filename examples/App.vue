@@ -13,7 +13,10 @@
 
 
 export default {
-  name: 'App'
+  name: 'App',
+  mounted () {
+    console.log('1212121');
+  }
 }
 </script>
 
