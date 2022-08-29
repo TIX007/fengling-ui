@@ -25,6 +25,8 @@
         :name="name"
         :value="value"
         @input="handleInput"
+        @focus="handleFocus"
+        @blur="handleBlur"
         :disabled="disabled"
         :readonly="readonly"
       />
@@ -199,6 +201,10 @@ export default {
         this.dispatch("FlFormItem", "fl.form.blur", [this.value]);
       }
     },
+    handleFocus(event) {
+        this.focused = true;
+        this.$emit('focus', event);
+      },
     handleInput(e) {
       this.$emit("input", e.target.value);
     },
@@ -267,6 +273,7 @@ export default {
       this.calcIconOffset("prefix");
       this.calcIconOffset("suffix");
     },
+    
   },
   mounted() {
     this.setNativeInputValue();

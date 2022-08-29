@@ -9,78 +9,6 @@ import GlobalLayout from "D:\\3三阶段\\项目实战\\vue项目\\UI库\\模板
 injectComponentOption(GlobalLayout, 'mixins', rootMixins)
 export const routes = [
   {
-    name: "v-cc9e83e4",
-    path: "/components/Select/",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-cc9e83e4").then(next)
-    },
-  },
-  {
-    path: "/components/Select/index.html",
-    redirect: "/components/Select/"
-  },
-  {
-    name: "v-6c6c724c",
-    path: "/components/Input/",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-6c6c724c").then(next)
-    },
-  },
-  {
-    path: "/components/Input/index.html",
-    redirect: "/components/Input/"
-  },
-  {
-    name: "v-77eae9ce",
-    path: "/components/form/",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-77eae9ce").then(next)
-    },
-  },
-  {
-    path: "/components/form/index.html",
-    redirect: "/components/form/"
-  },
-  {
-    name: "v-06cc56e8",
-    path: "/components/loading/",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-06cc56e8").then(next)
-    },
-  },
-  {
-    path: "/components/loading/index.html",
-    redirect: "/components/loading/"
-  },
-  {
-    name: "v-0661f6d5",
-    path: "/components/",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-0661f6d5").then(next)
-    },
-  },
-  {
-    path: "/components/index.html",
-    redirect: "/components/"
-  },
-  {
-    name: "v-6abbedae",
-    path: "/",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-6abbedae").then(next)
-    },
-  },
-  {
-    path: "/index.html",
-    redirect: "/"
-  },
-  {
     name: "v-64c477ee",
     path: "/components/Checkbox/",
     component: GlobalLayout,
@@ -105,6 +33,54 @@ export const routes = [
     redirect: "/components/Radio/"
   },
   {
+    name: "v-77eae9ce",
+    path: "/components/form/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-77eae9ce").then(next)
+    },
+  },
+  {
+    path: "/components/form/index.html",
+    redirect: "/components/form/"
+  },
+  {
+    name: "v-0661f6d5",
+    path: "/components/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-0661f6d5").then(next)
+    },
+  },
+  {
+    path: "/components/index.html",
+    redirect: "/components/"
+  },
+  {
+    name: "v-06cc56e8",
+    path: "/components/loading/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-06cc56e8").then(next)
+    },
+  },
+  {
+    path: "/components/loading/index.html",
+    redirect: "/components/loading/"
+  },
+  {
+    name: "v-6abbedae",
+    path: "/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-6abbedae").then(next)
+    },
+  },
+  {
+    path: "/index.html",
+    redirect: "/"
+  },
+  {
     name: "v-e82b9064",
     path: "/components/Button/",
     component: GlobalLayout,
@@ -115,6 +91,30 @@ export const routes = [
   {
     path: "/components/Button/index.html",
     redirect: "/components/Button/"
+  },
+  {
+    name: "v-cc9e83e4",
+    path: "/components/Select/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-cc9e83e4").then(next)
+    },
+  },
+  {
+    path: "/components/Select/index.html",
+    redirect: "/components/Select/"
+  },
+  {
+    name: "v-6c6c724c",
+    path: "/components/Input/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-6c6c724c").then(next)
+    },
+  },
+  {
+    path: "/components/Input/index.html",
+    redirect: "/components/Input/"
   },
   {
     path: '*',
