@@ -32,20 +32,41 @@
         ></i>
       </template>
     </fl-input>
+    <transition
+    name="fl-zoom-in-top"
+    @before-enter="handleMenuEnter"
+    @after-leave="doDestroy">
+      <fl-select-menu
+      ref="popper"
+      :append-to-body="popperAppendToBody"
+      v-show="visible && emptyText !== false">
+
+      </fl-select-menu>
+    </transition>
   </div>
 </template>
 
 <script>
+import Emitter from '../src/mixins/emitter';
+import Focus from '../src/mixins/focus';
+import Locale from '../src/mixins/locale';
+import NavigationMixin from './navigation-mixin';
+import FlScrollbar from '../packages/scrollbar/src/main.vue';
 import FlInput from "./Input.vue";
+import FlOption from "./Option.vue";
 import FlSelectMenu from "./Select-dropdown.vue";
 import { getValueByPath, valueEquals, isIE, isEdge } from "../src/utils/util";
 export default {
+  mixins: [Emitter, Locale, Focus('reference'), NavigationMixin],
+
   name: "FlSelect",
 
   componentName: "FlSelect",
 
   components: {
     FlInput,
+    FlOption,
+    FlScrollbar,
     FlSelectMenu,
   },
 
@@ -205,6 +226,23 @@ export default {
       }
       this.$emit("visible-change", val);
     },
+
+    options() {
+        if (this.$isServer) return;
+        this.$nextTick(() => {
+          this.broadcast('ElSelectDropdown', 'updatePopper');
+        });
+        if (this.multiple) {
+          this.resetInputHeight();
+        }
+        let inputs = this.$el.querySelectorAll('input');
+        if ([].indexOf.call(inputs, document.activeElement) === -1) {
+          this.setSelected();
+        }
+        if (this.defaultFirstOption && (this.filterable || this.remote) && this.filteredOptionsCount) {
+          this.checkDefaultFirstOption();
+        }
+      }
   },
 
   computed: {
@@ -243,16 +281,40 @@ export default {
     selectSize() {
       return this.size || this._flFormItemSize || (this.$ELEMENT || {}).size;
     },
+
+    showNewOption() {
+        let hasExistingOption = this.options.filter(option => !option.created)
+          .some(option => option.currentLabel === this.query);
+        return this.filterable && this.allowCreate && this.query !== '' && !hasExistingOption;
+      },
   },
   methods: {
     handleClearClick(event) {
       this.deleteSelected(event);
     },
+
     emitChange(val) {
       if (!valueEquals(this.value, val)) {
         this.$emit("change", val);
       }
     },
+
+    scrollToOption(option) {
+        const target = Array.isArray(option) && option[0] ? option[0].$el : option.$el;
+        if (this.$refs.popper && target) {
+          const menu = this.$refs.popper.$el.querySelector('.el-select-dropdown__wrap');
+          scrollIntoView(menu, target);
+        }
+        this.$refs.scrollbar && this.$refs.scrollbar.handleScroll();
+      },
+
+    handleMenuEnter() {
+        this.$nextTick(() => this.scrollToOption(this.selected));
+      },
+
+      doDestroy() {
+        this.$refs.popper && this.$refs.popper.doDestroy();
+      },
 
     deleteSelected(event) {
       event.stopPropagation();
@@ -262,6 +324,58 @@ export default {
       this.visible = false;
       this.$emit("clear");
     },
+
+    handleQueryChange(val) {
+        if (this.previousQuery === val || this.isOnComposition) return;
+        if (
+          this.previousQuery === null &&
+          (typeof this.filterMethod === 'function' || typeof this.remoteMethod === 'function')
+        ) {
+          this.previousQuery = val;
+          return;
+        }
+        this.previousQuery = val;
+        this.$nextTick(() => {
+          if (this.visible) this.broadcast('ElSelectDropdown', 'updatePopper');
+        });
+        this.hoverIndex = -1;
+        if (this.multiple && this.filterable) {
+          this.$nextTick(() => {
+            const length = this.$refs.input.value.length * 15 + 20;
+            this.inputLength = this.collapseTags ? Math.min(50, length) : length;
+            this.managePlaceholder();
+            this.resetInputHeight();
+          });
+        }
+        if (this.remote && typeof this.remoteMethod === 'function') {
+          this.hoverIndex = -1;
+          this.remoteMethod(val);
+        } else if (typeof this.filterMethod === 'function') {
+          this.filterMethod(val);
+          this.broadcast('ElOptionGroup', 'queryChange');
+        } else {
+          this.filteredOptionsCount = this.optionsCount;
+          this.broadcast('ElOption', 'queryChange', val);
+          this.broadcast('ElOptionGroup', 'queryChange');
+        }
+        if (this.defaultFirstOption && (this.filterable || this.remote) && this.filteredOptionsCount) {
+          this.checkDefaultFirstOption();
+        }
+      },
+
+      resetHoverIndex() {
+        setTimeout(() => {
+          if (!this.multiple) {
+            this.hoverIndex = this.options.indexOf(this.selected);
+          } else {
+            if (this.selected.length > 0) {
+              this.hoverIndex = Math.min.apply(null, this.selected.map(item => this.options.indexOf(item)));
+            } else {
+              this.hoverIndex = -1;
+            }
+          }
+        }, 300);
+      },
 
     getOption(value) {
       let option;
@@ -333,6 +447,7 @@ export default {
         }
         this.$emit("focus", event);
         console.log('2222',this.visible);
+        console.log('111',this);
       } else {
         this.softFocus = false;
       }
