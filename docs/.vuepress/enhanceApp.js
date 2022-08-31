@@ -7,6 +7,7 @@ import FLCheckbox from '../../packages/Checkbox.vue'
 import FLCheckboxGroup from '../../packages/Checkbox-group.vue'
 import FLInput from '../../packages/Input'
 import FLSelect from '../../packages/Select'
+import FLOption from '../../packages/Option.vue'
 // import FLSelectDropdown from '../../packages/Select-dropdown.vue'
 import FLRow from '../../packages/Row'
 import FLCol from '../../packages/Col'
@@ -25,6 +26,7 @@ export default  ({ Vue}) => {
                     Vue.component(FLCheckboxGroup.name, FLCheckboxGroup);
                     Vue.component(FLInput.name, FLInput);
                     Vue.component(FLSelect.name, FLSelect);
+                    Vue.component(FLOption.name, FLOption);
                 //     Vue.component(FLSelectDropdown.name, FLSelectDropdown);
                     Vue.component(FLRow.name, FLRow);
                     Vue.component(FLCol.name, FLCol);

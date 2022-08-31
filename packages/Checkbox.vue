@@ -197,9 +197,6 @@ export default {
 
 <style lang="scss" scoped>
 
-
-
-
 @import "common/var.scss";
 @import "mixins/mixins";
 @import "mixins/utils";

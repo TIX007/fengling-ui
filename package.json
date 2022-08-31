@@ -16,6 +16,9 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "deepmerge": "^4.2.2",
+    "resize-observer-polyfill": "^1.5.1",
+    "throttle-debounce": "^5.0.0",
     "vue": "^2.6.11"
   },
   "devDependencies": {

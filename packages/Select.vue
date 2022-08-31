@@ -15,6 +15,7 @@
       :readonly="readonly"
       @focus="handleFocus"
       @blur="handleBlur"
+      @input="debouncedOnInputChange"
     >
       <template slot="suffix">
         <i
@@ -40,7 +41,20 @@
       ref="popper"
       :append-to-body="popperAppendToBody"
       v-show="visible && emptyText !== false">
-
+        <fl-scrollbar
+        tag="ul"
+        wrap-class="fl-select-dropdown__wrap"
+        view-class="fl-select-dropdown__list"
+        ref="scrollbar"
+        :class="{ 'is-empty': !allowCreate && query && filteredOptionsCount === 0 }"
+        v-show="options.length > 0 && !loading">
+          <fl-option
+            :value="query"
+            created
+            v-if="showNewOption">
+          </fl-option>
+          <slot></slot>
+        </fl-scrollbar>
       </fl-select-menu>
     </transition>
   </div>
@@ -55,6 +69,8 @@ import FlScrollbar from '../packages/scrollbar/src/main.vue';
 import FlInput from "./Input.vue";
 import FlOption from "./Option.vue";
 import FlSelectMenu from "./Select-dropdown.vue";
+import {debounce} from 'throttle-debounce';
+import { addResizeListener, removeResizeListener } from '../src/utils/resize-event';
 import { getValueByPath, valueEquals, isIE, isEdge } from "../src/utils/util";
 export default {
   mixins: [Emitter, Locale, Focus('reference'), NavigationMixin],
@@ -155,7 +171,7 @@ export default {
 
   provide() {
     return {
-      select: this,
+      'select': this,
     };
   },
 
@@ -270,6 +286,21 @@ export default {
       return criteria;
     },
 
+    emptyText() {
+        if (this.loading) {
+          return this.loadingText || this.t('el.select.loading');
+        } else {
+          if (this.remote && this.query === '' && this.options.length === 0) return false;
+          if (this.filterable && this.query && this.options.length > 0 && this.filteredOptionsCount === 0) {
+            return this.noMatchText || this.t('el.select.noMatch');
+          }
+          if (this.options.length === 0) {
+            return this.noDataText || this.t('el.select.noData');
+          }
+        }
+        return null;
+      },
+
     iconClass() {
       return this.remote && this.filterable
         ? ""
@@ -286,6 +317,10 @@ export default {
         let hasExistingOption = this.options.filter(option => !option.created)
           .some(option => option.currentLabel === this.query);
         return this.filterable && this.allowCreate && this.query !== '' && !hasExistingOption;
+      },
+
+      debounce() {
+        return this.remote ? 300 : 0;
       },
   },
   methods: {
@@ -465,7 +500,107 @@ export default {
       this.visible = false;
       this.$refs.reference.blur();
     },
+
+    resetInputHeight() {
+        if (this.collapseTags && !this.filterable) return;
+        this.$nextTick(() => {
+          if (!this.$refs.reference) return;
+          let inputChildNodes = this.$refs.reference.$el.childNodes;
+          let input = [].filter.call(inputChildNodes, item => item.tagName === 'INPUT')[0];
+          const tags = this.$refs.tags;
+          const tagsHeight = tags ? Math.round(tags.getBoundingClientRect().height) : 0;
+          const sizeInMap = this.initialInputHeight || 40;
+          input.style.height = this.selected.length === 0
+            ? sizeInMap + 'px'
+            : Math.max(
+              tags ? (tagsHeight + (tagsHeight > sizeInMap ? 6 : 0)) : 0,
+              sizeInMap
+            ) + 'px';
+          if (this.visible && this.emptyText !== false) {
+            this.broadcast('FlSelectDropdown', 'updatePopper');
+          }
+        });
+      },
+
+      setSoftFocus() {
+        this.softFocus = true;
+        const input = this.$refs.input || this.$refs.reference;
+        if (input) {
+          input.focus();
+        }
+      },
+
+      toggleMenu() {
+        if (!this.selectDisabled) {
+          if (this.menuVisibleOnFocus) {
+            this.menuVisibleOnFocus = false;
+          } else {
+            this.visible = !this.visible;
+          }
+          if (this.visible) {
+            (this.$refs.input || this.$refs.reference).focus();
+          }
+        }
+      },
+
+      resetInputWidth() {
+        this.inputWidth = this.$refs.reference.$el.getBoundingClientRect().width;
+      },
+
+      handleResize() {
+        this.resetInputWidth();
+        if (this.multiple) this.resetInputHeight();
+      },
   },
+  created() {
+      this.cachedPlaceHolder = this.currentPlaceholder = this.propPlaceholder;
+      if (this.multiple && !Array.isArray(this.value)) {
+        this.$emit('input', []);
+      }
+      if (!this.multiple && Array.isArray(this.value)) {
+        this.$emit('input', '');
+      }
+
+      this.debouncedOnInputChange = debounce(this.debounce, () => {
+        this.onInputChange();
+      });
+
+      this.debouncedQueryChange = debounce(this.debounce, (e) => {
+        this.handleQueryChange(e.target.value);
+      });
+
+      this.$on('handleOptionClick', this.handleOptionSelect);
+      this.$on('setSelected', this.setSelected);
+    },
+  mounted() {
+      if (this.multiple && Array.isArray(this.value) && this.value.length > 0) {
+        this.currentPlaceholder = '';
+      }
+      addResizeListener(this.$el, this.handleResize);
+
+      const reference = this.$refs.reference;
+      if (reference && reference.$el) {
+        const sizeMap = {
+          medium: 36,
+          small: 32,
+          mini: 28
+        };
+        const input = reference.$el.querySelector('input');
+        this.initialInputHeight = input.getBoundingClientRect().height || sizeMap[this.selectSize];
+      }
+      if (this.remote && this.multiple) {
+        this.resetInputHeight();
+      }
+      this.$nextTick(() => {
+        if (reference && reference.$el) {
+          this.inputWidth = reference.$el.getBoundingClientRect().width;
+        }
+      });
+      this.setSelected();
+    },
+    beforeDestroy() {
+      if (this.$el && this.handleResize) removeResizeListener(this.$el, this.handleResize);
+    }
 };
 </script>
 

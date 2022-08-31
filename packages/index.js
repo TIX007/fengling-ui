@@ -9,6 +9,7 @@ import Radio from './Radio'
 import RadioGroup from './Radio-group'
 import RadioButton from './Radio-button'
 import Select from './Select'
+import Option from './Option.vue'
 // import SelectDropdown from './Select-dropdown'
 import Switch from './Switch'
 import CheckboxGroup from './Checkbox-group'
@@ -29,6 +30,7 @@ const components = [
   RadioGroup,
   RadioButton,
   Select,
+  Option,
   // SelectDropdown,
   Switch,
   CheckboxGroup,

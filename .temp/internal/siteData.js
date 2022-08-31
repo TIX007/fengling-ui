@@ -16,21 +16,106 @@ export const siteData = {
   ],
   "pages": [
     {
-      "title": "Select 选择器",
+      "title": "Button 按钮",
       "frontmatter": {},
-      "regularPath": "/components/Select/",
-      "relativePath": "components/Select/index.md",
-      "key": "v-cc9e83e4",
-      "path": "/components/Select/",
+      "regularPath": "/components/Button/",
+      "relativePath": "components/Button/index.md",
+      "key": "v-e82b9064",
+      "path": "/components/Button/",
       "headers": [
         {
           "level": 2,
           "title": "基础用法",
           "slug": "基础用法"
+        },
+        {
+          "level": 2,
+          "title": "自定义颜色属性",
+          "slug": "自定义颜色属性"
+        },
+        {
+          "level": 2,
+          "title": "禁用状态",
+          "slug": "禁用状态"
+        },
+        {
+          "level": 2,
+          "title": "文字按钮",
+          "slug": "文字按钮"
+        },
+        {
+          "level": 2,
+          "title": "图标按钮",
+          "slug": "图标按钮"
+        },
+        {
+          "level": 2,
+          "title": "按钮组",
+          "slug": "按钮组"
+        },
+        {
+          "level": 2,
+          "title": "加载中",
+          "slug": "加载中"
+        },
+        {
+          "level": 2,
+          "title": "不同尺寸",
+          "slug": "不同尺寸"
+        },
+        {
+          "level": 2,
+          "title": "Props",
+          "slug": "props"
+        },
+        {
+          "level": 2,
+          "title": "事件",
+          "slug": "事件"
+        },
+        {
+          "level": 2,
+          "title": "Slots",
+          "slug": "slots"
+        }
+      ]
+    },
+    {
+      "title": "Radio 单选框",
+      "frontmatter": {},
+      "regularPath": "/components/Radio/",
+      "relativePath": "components/Radio/index.md",
+      "key": "v-ee012d2c",
+      "path": "/components/Radio/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "基础用法",
+          "slug": "基础用法"
+        },
+        {
+          "level": 2,
+          "title": "禁用状态",
+          "slug": "禁用状态"
+        },
+        {
+          "level": 2,
+          "title": "单选框组",
+          "slug": "单选框组"
+        },
+        {
+          "level": 2,
+          "title": "按钮样式",
+          "slug": "按钮样式"
+        },
+        {
+          "level": 2,
+          "title": "带有边框",
+          "slug": "带有边框"
         }
       ],
-      "lastUpdated": "2022/8/25 下午3:13:38",
-      "lastUpdatedTimestamp": 1661411618000
+      "lastUpdated": "2022/8/18 下午3:51:09",
+      "lastUpdatedTimestamp": 1660809069000
     },
     {
       "title": "Input 输入框",
@@ -95,13 +180,58 @@ export const siteData = {
       "lastUpdatedTimestamp": 1661411618000
     },
     {
+      "title": "Checkbox 多选框",
       "frontmatter": {},
-      "regularPath": "/components/form/",
-      "relativePath": "components/form/index.md",
-      "key": "v-77eae9ce",
-      "path": "/components/form/",
-      "lastUpdated": "2022/7/6 下午12:24:28",
-      "lastUpdatedTimestamp": 1657081468000
+      "regularPath": "/components/Checkbox/",
+      "relativePath": "components/Checkbox/index.md",
+      "key": "v-64c477ee",
+      "path": "/components/Checkbox/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "基础用法",
+          "slug": "基础用法"
+        },
+        {
+          "level": 2,
+          "title": "禁用状态",
+          "slug": "禁用状态"
+        },
+        {
+          "level": 2,
+          "title": "多选框组",
+          "slug": "多选框组"
+        },
+        {
+          "level": 2,
+          "title": "indeterminate 状态",
+          "slug": "indeterminate-状态"
+        },
+        {
+          "level": 2,
+          "title": "可选项目数量的限制",
+          "slug": "可选项目数量的限制"
+        }
+      ],
+      "lastUpdated": "2022/8/18 下午3:51:09",
+      "lastUpdatedTimestamp": 1660809069000
+    },
+    {
+      "title": "Select 选择器",
+      "frontmatter": {},
+      "regularPath": "/components/Select/",
+      "relativePath": "components/Select/index.md",
+      "key": "v-cc9e83e4",
+      "path": "/components/Select/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "基础用法",
+          "slug": "基础用法"
+        }
+      ],
+      "lastUpdated": "2022/8/25 下午3:13:38",
+      "lastUpdatedTimestamp": 1661411618000
     },
     {
       "title": "安装",
@@ -124,6 +254,15 @@ export const siteData = {
       ],
       "lastUpdated": "2022/7/26 下午3:50:16",
       "lastUpdatedTimestamp": 1658821816000
+    },
+    {
+      "frontmatter": {},
+      "regularPath": "/components/form/",
+      "relativePath": "components/form/index.md",
+      "key": "v-77eae9ce",
+      "path": "/components/form/",
+      "lastUpdated": "2022/7/6 下午12:24:28",
+      "lastUpdatedTimestamp": 1657081468000
     },
     {
       "title": "持续更新中……",
@@ -166,145 +305,6 @@ export const siteData = {
       "path": "/",
       "lastUpdated": "2022/8/22 下午4:56:34",
       "lastUpdatedTimestamp": 1661158594000
-    },
-    {
-      "title": "Checkbox 多选框",
-      "frontmatter": {},
-      "regularPath": "/components/Checkbox/",
-      "relativePath": "components/Checkbox/index.md",
-      "key": "v-64c477ee",
-      "path": "/components/Checkbox/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "基础用法",
-          "slug": "基础用法"
-        },
-        {
-          "level": 2,
-          "title": "禁用状态",
-          "slug": "禁用状态"
-        },
-        {
-          "level": 2,
-          "title": "多选框组",
-          "slug": "多选框组"
-        },
-        {
-          "level": 2,
-          "title": "indeterminate 状态",
-          "slug": "indeterminate-状态"
-        },
-        {
-          "level": 2,
-          "title": "可选项目数量的限制",
-          "slug": "可选项目数量的限制"
-        }
-      ],
-      "lastUpdated": "2022/8/18 下午3:51:09",
-      "lastUpdatedTimestamp": 1660809069000
-    },
-    {
-      "title": "Radio 单选框",
-      "frontmatter": {},
-      "regularPath": "/components/Radio/",
-      "relativePath": "components/Radio/index.md",
-      "key": "v-ee012d2c",
-      "path": "/components/Radio/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "基础用法",
-          "slug": "基础用法"
-        },
-        {
-          "level": 2,
-          "title": "禁用状态",
-          "slug": "禁用状态"
-        },
-        {
-          "level": 2,
-          "title": "单选框组",
-          "slug": "单选框组"
-        },
-        {
-          "level": 2,
-          "title": "按钮样式",
-          "slug": "按钮样式"
-        },
-        {
-          "level": 2,
-          "title": "带有边框",
-          "slug": "带有边框"
-        }
-      ],
-      "lastUpdated": "2022/8/18 下午3:51:09",
-      "lastUpdatedTimestamp": 1660809069000
-    },
-    {
-      "title": "Button 按钮",
-      "frontmatter": {},
-      "regularPath": "/components/Button/",
-      "relativePath": "components/Button/index.md",
-      "key": "v-e82b9064",
-      "path": "/components/Button/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "基础用法",
-          "slug": "基础用法"
-        },
-        {
-          "level": 2,
-          "title": "自定义颜色属性",
-          "slug": "自定义颜色属性"
-        },
-        {
-          "level": 2,
-          "title": "禁用状态",
-          "slug": "禁用状态"
-        },
-        {
-          "level": 2,
-          "title": "文字按钮",
-          "slug": "文字按钮"
-        },
-        {
-          "level": 2,
-          "title": "图标按钮",
-          "slug": "图标按钮"
-        },
-        {
-          "level": 2,
-          "title": "按钮组",
-          "slug": "按钮组"
-        },
-        {
-          "level": 2,
-          "title": "加载中",
-          "slug": "加载中"
-        },
-        {
-          "level": 2,
-          "title": "不同尺寸",
-          "slug": "不同尺寸"
-        },
-        {
-          "level": 2,
-          "title": "Props",
-          "slug": "props"
-        },
-        {
-          "level": 2,
-          "title": "事件",
-          "slug": "事件"
-        },
-        {
-          "level": 2,
-          "title": "Slots",
-          "slug": "slots"
-        }
-      ]
     }
   ],
   "themeConfig": {

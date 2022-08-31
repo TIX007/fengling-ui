@@ -1,6 +1,6 @@
-<template>
+<!-- <template>
   
-</template>
+</template> -->
 
 <script>
 // reference https://github.com/noeldelgado/gemini-scrollbar/blob/master/index.js
