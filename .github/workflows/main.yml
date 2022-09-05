@@ -10,7 +10,7 @@ jobs:
       # 使用别人封装好的的action，用于clone该仓库的源码到工作流中
       - name: Checkout
         uses: actions/checkout@v3
-​
+
       # 在工作流中安装node环境（必需，这样才能在后续工作流程中运行 npm install 等指令，否则会报错）
       - name: Setup node
         uses: actions/setup-node@v3
