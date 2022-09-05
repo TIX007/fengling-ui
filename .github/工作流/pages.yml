@@ -2,7 +2,7 @@ name: Auto Deploy # 当前工作流程的名称
 on: 
   push: 
     branches: 
-      - main # 只要push到main分支，就会触发该工作流程
+      - master # 只要push到master分支，就会触发该工作流程
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
