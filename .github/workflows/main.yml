@@ -36,7 +36,7 @@ jobs:
         run: |
           npm install -g yarn
           yarn install # 安装依赖
-          yarn run docs:build # 打包代码到生产环境（目标路径为：server/public）
+          npm run docs:build # 打包代码到生产环境（目标路径为：server/public）
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
