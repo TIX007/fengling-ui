@@ -37,13 +37,3 @@ jobs:
           yarn -v
           yarn install # 安装依赖
           npm run docs:build # 打包代码到生产环境（目标路径为：server/public）
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
