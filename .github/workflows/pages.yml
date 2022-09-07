@@ -37,7 +37,7 @@ jobs:
         with:
           # Upload entire repository
           local: './docs/.vuepress/dist/*' # 源路径（工作流）
-          path: ''
+          path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
