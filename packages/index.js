@@ -17,6 +17,7 @@ import Form from './Form'
 import FormItem from './Form-item'
 import FlRow from './Row'
 import FlCol from './Col'
+import FlCard from './Card'
 import FlIcon from './icon.vue'
 import ButtonGroup from './Button-group.vue'
 import './fonts/iconfont.css'
@@ -38,6 +39,7 @@ const components = [
   FormItem,
   FlRow,
   FlCol,
+  FlCard,
   FlIcon,
   ButtonGroup
 ]

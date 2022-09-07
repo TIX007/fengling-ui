@@ -42,6 +42,7 @@ module.exports = {
                         { title: "Checkbox 多选框", path: '/components/Checkbox/' },
                         { title: "Input 输入框", path: '/components/Input/' },
                         { title: "Select 选择器", path: '/components/Select/' },
+                        { title: "Card 卡片", path: '/components/Card/' },
                         { title: "持续更新中……", path: '/components/loading/' },
                     ],
                 }
