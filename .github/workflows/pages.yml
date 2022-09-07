@@ -31,4 +31,4 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: './docs/.vuepress/dist/*' # The folder the action should deploy.
+          folder: build.~/docs/.vuepress/dist/* # The folder the action should deploy.
