@@ -25,7 +25,6 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -37,7 +36,7 @@ jobs:
         with:
           # Upload entire repository
           local: './docs/.vuepress/dist/*' # 源路径（工作流）
-          path: http://example.com/index.html
+          path: ''
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
