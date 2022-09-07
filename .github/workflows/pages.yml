@@ -21,30 +21,14 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: https://tix007.github.io/fengling-ui
+  build-and-deploy:
+    concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout 🛎️
         uses: actions/checkout@v3
-      - name: Setup Pages
-        uses: actions/configure-pages@v2
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          # Upload entire repository
-          path: '.'
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v2.0.0
-        with:
-          # Optional static site generator to attempt to configure: "nuxt", "next", "gatsby", or "sveltekit"
-            static_site_generator: next
-          # Optional file path to static site generator configuration file
-            generator_config_file: './docs/.vuepress/dist/*'
-          # GitHub token
-            token: ${{ github.token }}
-          # Should a Pages site be enabled for the repository if not so already?
-            enablement: true
+          folder: /docs/.vuepress/dist/* # The folder the action should deploy.
