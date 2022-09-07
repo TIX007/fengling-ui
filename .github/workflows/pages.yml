@@ -36,7 +36,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
-          path: '.'
+          path: https://github.com/TIX007/fengling-ui
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v2.0.0
         with:
