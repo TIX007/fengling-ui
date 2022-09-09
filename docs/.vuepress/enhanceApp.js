@@ -12,6 +12,7 @@ import FLOption from '../../packages/Option.vue'
 import FLRow from '../../packages/Row'
 import FLCol from '../../packages/Col'
 import FlCard from '../../packages/Card'
+import FlSwitch from '../../packages/Switch'
 import FlIcon from '../../packages/icon.vue'
 import './styles/index.styl'
 import '../../packages/fonts/flement-icons.ttf'
@@ -32,6 +33,7 @@ export default  ({ Vue}) => {
                     Vue.component(FLRow.name, FLRow);
                     Vue.component(FLCol.name, FLCol);
                     Vue.component(FlCard.name, FlCard);
+                    Vue.component(FlSwitch.name, FlSwitch);
                     Vue.component(FlIcon.name, FlIcon);
                     Vue.component(FlButtonGroup.name, FlButtonGroup);
             }
