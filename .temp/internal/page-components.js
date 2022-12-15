@@ -3,14 +3,14 @@
  */
 export default {
   "v-34d558ea": () => import("D:\\3框架项目\\项目实战\\vue项目\\UI库\\模板\\fengling-ui\\docs\\components\\Card\\index.md"),
-  "v-b8afbb6e": () => import("D:\\3框架项目\\项目实战\\vue项目\\UI库\\模板\\fengling-ui\\docs\\components\\Input\\index.md"),
+  "v-1e7f3a6a": () => import("D:\\3框架项目\\项目实战\\vue项目\\UI库\\模板\\fengling-ui\\docs\\components\\Select\\index.md"),
+  "v-7f89cd32": () => import("D:\\3框架项目\\项目实战\\vue项目\\UI库\\模板\\fengling-ui\\docs\\components\\Radio\\index.md"),
   "v-3a0c46ea": () => import("D:\\3框架项目\\项目实战\\vue项目\\UI库\\模板\\fengling-ui\\docs\\components\\Button\\index.md"),
-  "v-a46d13aa": () => import("D:\\3框架项目\\项目实战\\vue项目\\UI库\\模板\\fengling-ui\\docs\\components\\Checkbox\\index.md"),
-  "v-455c750b": () => import("D:\\3框架项目\\项目实战\\vue项目\\UI库\\模板\\fengling-ui\\docs\\components\\form\\index.md"),
-  "v-d8e00b5c": () => import("D:\\3框架项目\\项目实战\\vue项目\\UI库\\模板\\fengling-ui\\docs\\components\\index.md"),
   "v-4ef47f36": () => import("D:\\3框架项目\\项目实战\\vue项目\\UI库\\模板\\fengling-ui\\docs\\components\\loading\\index.md"),
   "v-cafca62a": () => import("D:\\3框架项目\\项目实战\\vue项目\\UI库\\模板\\fengling-ui\\docs\\index.md"),
+  "v-d8e00b5c": () => import("D:\\3框架项目\\项目实战\\vue项目\\UI库\\模板\\fengling-ui\\docs\\components\\index.md"),
+  "v-455c750b": () => import("D:\\3框架项目\\项目实战\\vue项目\\UI库\\模板\\fengling-ui\\docs\\components\\form\\index.md"),
   "v-cc58b46a": () => import("D:\\3框架项目\\项目实战\\vue项目\\UI库\\模板\\fengling-ui\\docs\\components\\Switch\\index.md"),
-  "v-7f89cd32": () => import("D:\\3框架项目\\项目实战\\vue项目\\UI库\\模板\\fengling-ui\\docs\\components\\Radio\\index.md"),
-  "v-1e7f3a6a": () => import("D:\\3框架项目\\项目实战\\vue项目\\UI库\\模板\\fengling-ui\\docs\\components\\Select\\index.md") 
+  "v-a46d13aa": () => import("D:\\3框架项目\\项目实战\\vue项目\\UI库\\模板\\fengling-ui\\docs\\components\\Checkbox\\index.md"),
+  "v-b8afbb6e": () => import("D:\\3框架项目\\项目实战\\vue项目\\UI库\\模板\\fengling-ui\\docs\\components\\Input\\index.md") 
 }

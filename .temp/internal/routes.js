@@ -21,16 +21,28 @@ export const routes = [
     redirect: "/components/Card/"
   },
   {
-    name: "v-b8afbb6e",
-    path: "/components/Input/",
+    name: "v-1e7f3a6a",
+    path: "/components/Select/",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-b8afbb6e").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-1e7f3a6a").then(next)
     },
   },
   {
-    path: "/components/Input/index.html",
-    redirect: "/components/Input/"
+    path: "/components/Select/index.html",
+    redirect: "/components/Select/"
+  },
+  {
+    name: "v-7f89cd32",
+    path: "/components/Radio/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-7f89cd32").then(next)
+    },
+  },
+  {
+    path: "/components/Radio/index.html",
+    redirect: "/components/Radio/"
   },
   {
     name: "v-3a0c46ea",
@@ -43,42 +55,6 @@ export const routes = [
   {
     path: "/components/Button/index.html",
     redirect: "/components/Button/"
-  },
-  {
-    name: "v-a46d13aa",
-    path: "/components/Checkbox/",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-a46d13aa").then(next)
-    },
-  },
-  {
-    path: "/components/Checkbox/index.html",
-    redirect: "/components/Checkbox/"
-  },
-  {
-    name: "v-455c750b",
-    path: "/components/form/",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-455c750b").then(next)
-    },
-  },
-  {
-    path: "/components/form/index.html",
-    redirect: "/components/form/"
-  },
-  {
-    name: "v-d8e00b5c",
-    path: "/components/",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-d8e00b5c").then(next)
-    },
-  },
-  {
-    path: "/components/index.html",
-    redirect: "/components/"
   },
   {
     name: "v-4ef47f36",
@@ -105,6 +81,30 @@ export const routes = [
     redirect: "/"
   },
   {
+    name: "v-d8e00b5c",
+    path: "/components/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-d8e00b5c").then(next)
+    },
+  },
+  {
+    path: "/components/index.html",
+    redirect: "/components/"
+  },
+  {
+    name: "v-455c750b",
+    path: "/components/form/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-455c750b").then(next)
+    },
+  },
+  {
+    path: "/components/form/index.html",
+    redirect: "/components/form/"
+  },
+  {
     name: "v-cc58b46a",
     path: "/components/Switch/",
     component: GlobalLayout,
@@ -117,28 +117,28 @@ export const routes = [
     redirect: "/components/Switch/"
   },
   {
-    name: "v-7f89cd32",
-    path: "/components/Radio/",
+    name: "v-a46d13aa",
+    path: "/components/Checkbox/",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-7f89cd32").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-a46d13aa").then(next)
     },
   },
   {
-    path: "/components/Radio/index.html",
-    redirect: "/components/Radio/"
+    path: "/components/Checkbox/index.html",
+    redirect: "/components/Checkbox/"
   },
   {
-    name: "v-1e7f3a6a",
-    path: "/components/Select/",
+    name: "v-b8afbb6e",
+    path: "/components/Input/",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-1e7f3a6a").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-b8afbb6e").then(next)
     },
   },
   {
-    path: "/components/Select/index.html",
-    redirect: "/components/Select/"
+    path: "/components/Input/index.html",
+    redirect: "/components/Input/"
   },
   {
     path: '*',

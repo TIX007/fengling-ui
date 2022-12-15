@@ -407,8 +407,11 @@ export default {
         this.resetInputHeight();
       }
       let inputs = this.$el.querySelectorAll("input");
+      console.log(inputs,'inputs----------------------');
+      console.log(document.activeElement,'document.activeElement');
       if ([].indexOf.call(inputs, document.activeElement) === -1) {
         this.setSelected();
+        console.log('121212');
       }
       if (
         this.defaultFirstOption &&
@@ -504,7 +507,7 @@ export default {
     propPlaceholder() {
       return typeof this.placeholder !== "undefined"
         ? this.placeholder
-        : this.t("el.select.placeholder");
+        : this.t("fl.select.placeholder");
     },
   },
 
@@ -536,7 +539,7 @@ export default {
       }
       this.previousQuery = val;
       this.$nextTick(() => {
-        if (this.visible) this.broadcast("ElSelectDropdown", "updatePopper");
+        if (this.visible) this.broadcast("FlSelectDropdown", "updatePopper");
       });
       this.hoverIndex = -1;
       if (this.multiple && this.filterable) {
@@ -552,11 +555,11 @@ export default {
         this.remoteMethod(val);
       } else if (typeof this.filterMethod === "function") {
         this.filterMethod(val);
-        this.broadcast("ElOptionGroup", "queryChange");
+        this.broadcast("FlOptionGroup", "queryChange");
       } else {
         this.filteredOptionsCount = this.optionsCount;
-        this.broadcast("ElOption", "queryChange", val);
-        this.broadcast("ElOptionGroup", "queryChange");
+        this.broadcast("FlOption", "queryChange", val);
+        this.broadcast("FlOptionGroup", "queryChange");
       }
       if (
         this.defaultFirstOption &&
@@ -572,7 +575,7 @@ export default {
         Array.isArray(option) && option[0] ? option[0].$el : option.$el;
       if (this.$refs.popper && target) {
         const menu = this.$refs.popper.$el.querySelector(
-          ".el-select-dropdown__wrap"
+          ".fl-select-dropdown__wrap"
         );
         scrollIntoView(menu, target);
       }
@@ -750,7 +753,7 @@ export default {
                 sizeInMap
               ) + "px";
         if (this.visible && this.emptyText !== false) {
-          this.broadcast("ElSelectDropdown", "updatePopper");
+          this.broadcast("FlSelectDropdown", "updatePopper");
         }
       });
     },
@@ -843,6 +846,8 @@ export default {
           this.visible = !this.visible;
         }
         if (this.visible) {
+          // debugger
+          console.log(this.$refs.reference,'this.$refs.reference');
           (this.$refs.input || this.$refs.reference).focus();
         }
       }
@@ -993,7 +998,7 @@ export default {
     });
     this.setSelected();
   },
-  
+
   beforeDestroy() {
     if (this.$el && this.handleResize)
       removeResizeListener(this.$el, this.handleResize);
@@ -1017,6 +1022,148 @@ export default {
 
   &:hover {
     color: $--select-close-hover-color;
+  }
+}
+@include b(select) {
+  display: inline-block;
+  position: relative;
+
+  .fl-select__tags
+    >span {
+      display: contents;
+    }
+
+  &:hover {
+    .fl-input__inner {
+      border-color: $--select-border-color-hover;
+    }
+  }
+
+  .fl-input__inner {
+    cursor: pointer;
+    padding-right: 35px;
+
+    &:focus {
+      border-color: $--select-input-focus-border-color;
+    }
+  }
+
+  .fl-input {
+    & .fl-select__caret {
+      color: $--select-input-color;
+      font-size: $--select-input-font-size;
+      transition: transform .3s;
+      transform: rotateZ(180deg);
+      cursor: pointer;
+
+      @include when(reverse) {
+        transform: rotateZ(0deg);
+      }
+
+      @include when(show-close) {
+        font-size: $--select-font-size;
+        text-align: center;
+        transform: rotateZ(180deg);
+        border-radius: $--border-radius-circle;
+        color: $--select-input-color;
+        transition: $--color-transition-base;
+
+        &:hover {
+          color: $--select-close-hover-color;
+        }
+      }
+    }
+
+    &.is-disabled {
+      & .fl-input__inner {
+        cursor: not-allowed;
+
+        &:hover {
+          border-color: $--select-disabled-border;
+        }
+      }
+    }
+
+    &.is-focus .fl-input__inner {
+      border-color: $--select-input-focus-border-color;
+    }
+  }
+
+  > .fl-input {
+    display: block;
+  }
+
+  @include e(input) {
+    border: none;
+    outline: none;
+    padding: 0;
+    margin-left: 15px;
+    color: $--select-multiple-input-color;
+    font-size: $--select-font-size;
+    appearance: none;
+    height: 28px;
+    background-color: transparent;
+    @include when(mini) {
+      height: 14px;
+    }
+  }
+
+  @include e(close) {
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    z-index: $--index-top;
+    right: 25px;
+    color: $--select-input-color;
+    line-height: 18px;
+    font-size: $--select-input-font-size;
+
+    &:hover {
+      color: $--select-close-hover-color;
+    }
+  }
+
+  @include e(tags) {
+    position: absolute;
+    line-height: normal;
+    white-space: normal;
+    z-index: $--index-normal;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  @include e(tags-text) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .fl-tag {
+    box-sizing: border-box;
+    border-color: transparent;
+    margin: 2px 0 2px 6px;
+    background-color: #f0f2f5;
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+
+    &__close.fl-icon-close {
+      background-color: $--color-text-placeholder;
+      top: 0;
+      color: $--color-white;
+      flex-shrink: 0;
+
+      &:hover {
+        background-color: $--color-text-secondary;
+      }
+
+      &::before {
+        display: block;
+        transform: translate(0, .5px);
+      }
+    }
   }
 }
 </style>
